@@ -107,22 +107,42 @@
 
     /* HERO */
     .hero {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: var(--card-bg);
-      padding: 60px 40px;          /* taller card */
+      padding: 60px 40px;
       margin-top: 32px;
       border-radius: 24px;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
       border: 1px solid rgba(20, 59, 111, 0.06);
+      overflow: hidden;
+    }
+
+    /* subtle inner fade at bottom */
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+      height: 40px;
+      background: radial-gradient(
+        ellipse at bottom,
+        rgba(0, 0, 0, 0.07),
+        transparent 60%
+      );
+      pointer-events: none;
     }
 
     .hero-left {
-      max-width: 55%;
+      max-width: 50%;   /* slightly tighter column */
       display: flex;
       flex-direction: column;
-      gap: 10px;                    /* more vertical breathing room */
+      gap: 10px;
+      position: relative;
+      z-index: 1;
     }
 
     /* HUGE Hello! */
@@ -164,13 +184,13 @@
     .hero-major {
       font-size: 2rem;
       font-weight: 600;
-      color: var(--text-muted);
+      color: #666666;
     }
 
     .hero-and {
       font-size: 1rem;
       font-weight: 400;
-      color: var(--text-muted);
+      color: #666666;
     }
 
     /* MBA on its own line, same size as Mechatronics Engineering */
@@ -182,13 +202,13 @@
     .hero-mba {
       font-size: 2rem;
       font-weight: 600;
-      color: var(--text-muted);
+      color: #666666;
     }
 
     /* Student at MTSU + logo + buttons */
     .hero-school-row {
       display: flex;
-      align-items: flex-end;       /* align bottoms: logo bottom = buttons bottom */
+      align-items: flex-end;  /* bottom align logo with buttons */
       gap: 18px;
       margin-top: 18px;
     }
@@ -204,6 +224,7 @@
       font-weight: 600;
       margin: 0;
       line-height: 1.25;
+      color: #666666;
     }
 
     .hero-buttons {
@@ -223,6 +244,7 @@
       text-decoration: none;
       text-align: center;
       box-sizing: border-box;
+      letter-spacing: 0.03em;
     }
 
     .resume-button {
@@ -258,6 +280,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     .photo-placeholder {
@@ -266,7 +290,17 @@
       background: #cd7f63;
       border-radius: 50%;
       border: 4px solid #ffffff;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22); /* softened shadow */
+    }
+
+    /* Scroll hint under hero */
+    .scroll-hint {
+      text-align: center;
+      margin: 14px 0 10px;
+      font-size: 0.8rem;
+      color: #888888;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     /* Slogan */
@@ -274,6 +308,54 @@
       width: 100%;
       border-radius: 24px;
       box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+      margin-top: 10px;
+    }
+
+    /* Projects section */
+    .projects {
+      margin-top: 48px;
+    }
+
+    .projects h2 {
+      font-size: 2rem;
+      margin-bottom: 4px;
+    }
+
+    .projects-subtitle {
+      font-size: 0.98rem;
+      color: #777777;
+      margin-bottom: 20px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .project-role {
+      font-size: 0.9rem;
+      color: #777777;
+      margin-bottom: 10px;
+    }
+
+    .project-body {
+      font-size: 0.96rem;
+      color: #555555;
     }
   </style>
 </head>
@@ -294,7 +376,7 @@
     </div>
   </div>
 
-  <div class="page">
+  <div class="page" id="home">
     <!-- HERO -->
     <header class="hero">
       <div class="hero-left">
@@ -337,9 +419,41 @@
       </div>
     </header>
 
+    <p class="scroll-hint">Scroll to explore</p>
+
     <!-- SLOGAN -->
-    <section class="slogan-section">
+    <section class="slogan-section" id="about">
       <img src="slogan-image.png" alt="Mission Statement Banner" />
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <p class="projects-subtitle">
+        A few of the things I have been designing, building, and optimizing.
+      </p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-title">Solar Scrubber</div>
+          <div class="project-role">Capstone • Mechatronics Engineering</div>
+          <div class="project-body">
+            Autonomous tracked robot for cleaning rooftop solar panels, with dual
+            sensor edge detection, hoist safety system, and spray plus brush
+            cleaning assembly.
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title">FPV Drone Controls</div>
+          <div class="project-role">Controls and Optimization</div>
+          <div class="project-body">
+            Custom designed FPV quadcopter with tuned control loops and 3D
+            printed components, focused on stability, maneuverability, and data
+            driven controller refinement.
+          </div>
+        </article>
+      </div>
     </section>
   </div>
 
