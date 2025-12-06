@@ -37,11 +37,6 @@
       text-decoration: underline;
     }
 
-    .fun-footer::selection {
-      background: var(--accent);
-      color: white;
-    }
-
     html {
       scroll-behavior: smooth;
     }
@@ -57,10 +52,9 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 24px 40px;
-      background: transparent;
     }
 
-    /* TOP NAV */
+    /* NAV */
     .top-nav {
       position: sticky;
       top: 0;
@@ -71,8 +65,7 @@
       display: flex;
       align-items: center;
       backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      transition: 0.25s;
     }
 
     .top-nav.scrolled {
@@ -87,7 +80,6 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      padding: 0 32px;
     }
 
     .nav-links {
@@ -97,30 +89,28 @@
       max-width: 900px;
       font-size: 1.02rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
     }
 
     .nav-links a {
-      color: #ffffff;
+      color: white;
       text-decoration: none;
       padding: 6px 14px;
       border-radius: 999px;
-      transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+      transition: 0.18s;
     }
 
     .nav-links a:hover {
       background: rgba(255, 255, 255, 0.16);
       transform: translateY(-1px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: var(--card-bg);
-      padding: 40px 40px;
+      padding: 40px;
       margin-top: 32px;
       border-radius: 24px;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
@@ -138,13 +128,11 @@
       font-size: 2.6rem;
       font-weight: 800;
       margin: 0;
-      color: #3a3a3a;
     }
 
     .hero-intro {
       font-size: 1.6rem;
-      margin: 4px 0 4px;
-      color: #4a4a4a;
+      margin: 0;
     }
 
     .hero-intro span {
@@ -154,46 +142,51 @@
     .hero-role {
       font-size: 1.25rem;
       color: var(--text-muted);
-      margin: 10px 0 4px;
+      margin-top: 8px;
+    }
+
+    /* NEW → Student + MT logo aligned */
+    .hero-bottom-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 4px;
     }
 
     .hero-school {
       font-size: 1rem;
-      color: #777777;
-      margin: 4px 0 18px;
+      color: #666;
+      margin: 0;
+      line-height: 1.1;
+      padding-top: 4px;
     }
 
-    .hero-actions {
+    .mt-logo-inline {
+      max-height: 48px;
+      width: auto;
+      filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.25));
+    }
+
+    /* Resume tucked under */
+    .resume-under {
+      margin-top: 10px;
       display: flex;
-      align-items: center;
-      gap: 22px;
-      margin-top: 8px;
     }
 
     .resume-button {
-      display: inline-block;
       padding: 12px 38px;
       border-radius: 999px;
-      border: none;
       background: #c63728;
-      color: #ffffff;
+      color: white;
       font-size: 1.02rem;
       font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
       text-decoration: none;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+      transition: 0.18s;
     }
 
     .resume-button:hover {
       background: #a72d20;
-    }
-
-    .mt-logo {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin-top: 14px;
-      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
     }
 
     .hero-right {
@@ -211,75 +204,21 @@
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
     }
 
-    /* SLOGAN IMAGE SECTION */
-    .slogan-section {
-      padding: 0;
-      margin: 28px 0 0;
-      border: none;
-      background: transparent;
-    }
-
+    /* SLOGAN IMAGE */
     .slogan-section img {
       width: 100%;
-      height: auto;
-      display: block;
       border-radius: 24px;
-      border: 1px solid rgba(0, 0, 0, 0.06);
       box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .hero {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px 22px;
-        margin-top: 24px;
-      }
-
-      .hero-left {
-        max-width: 100%;
-      }
-
-      .hero-right {
-        margin-top: 24px;
-        align-self: center;
-      }
-
-      .photo-placeholder {
-        width: 220px;
-        height: 220px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 8px;
-        font-size: 0.96rem;
-      }
-
-      .page {
-        padding-inline: 18px;
-      }
-
-      .hero-hello {
-        font-size: 2.2rem;
-      }
-
-      .hero-intro {
-        font-size: 1.4rem;
-      }
     }
   </style>
 </head>
 
 <body>
-  <!-- TOP NAV -->
+  <!-- NAV -->
   <div class="top-nav">
     <div class="top-nav-inner">
       <div class="nav-links">
-        <a href="/Portfolio/">Home</a>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
@@ -291,23 +230,30 @@
   </div>
 
   <div class="page">
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <header class="hero">
       <div class="hero-left">
-        <p class="hero-hello">Hello!</p>
-        <p class="hero-intro">I’m <span>Alex Ayala</span></p>
-        <p class="hero-role">Mechatronics Engineering &amp; MBA</p>
-        <p class="hero-school">Student at MTSU</p>
 
-        <div class="hero-actions">
+        <p class="hero-hello">Hello!</p>
+        <p class="hero-intro">I'm <span>Alex Ayala</span></p>
+        <p class="hero-role">Mechatronics Engineering & MBA</p>
+
+        <!-- Student + MT Logo Row -->
+        <div class="hero-bottom-row">
+          <p class="hero-school">Student at MTSU</p>
+
+          <img
+            src="Middle-Tennessee-Blue-Raiders-logo.png"
+            class="mt-logo-inline"
+            alt="MTSU Logo"
+          />
+        </div>
+
+        <!-- Resume Button Under -->
+        <div class="resume-under">
           <a href="#resume" class="resume-button">Resume</a>
         </div>
 
-        <img
-          class="mt-logo"
-          src="Middle-Tennessee-Blue-Raiders-logo.png"
-          alt="Middle Tennessee State University Blue Raiders logo"
-        />
       </div>
 
       <div class="hero-right">
@@ -315,12 +261,9 @@
       </div>
     </header>
 
-    <!-- SLOGAN IMAGE -->
+    <!-- SLOGAN -->
     <section class="slogan-section">
-      <img
-        src="slogan-image.png"
-        alt="Design with Ingenuity, Communicate with Clarity, Lead with Integrity"
-      />
+      <img src="slogan-image.png" alt="Mission Statement Banner">
     </section>
   </div>
 
@@ -331,7 +274,6 @@
     😊 Have a great day!
   </footer>
 
-  <!-- NAV SCROLL SCRIPT -->
   <script>
     window.addEventListener("scroll", function () {
       const nav = document.querySelector(".top-nav");
