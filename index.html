@@ -6,6 +6,10 @@
   <title>Alex Ayala | Portfolio</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -14,9 +18,55 @@
     }
 
     .page {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 40px 24px 72px;
+      padding: 0 24px 72px;
+    }
+
+    /* TOP NAVIGATION */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .top-nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+    }
+
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #005bbb;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: #444;
+      text-decoration: none;
+      padding: 4px 6px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: #eef2f3;
     }
 
     /* HEADER */
@@ -26,6 +76,7 @@
       background: white;
       border-bottom: 1px solid #e6e6e6;
       border-radius: 0 0 24px 24px;
+      margin-bottom: 28px;
     }
 
     h1 {
@@ -55,6 +106,23 @@
       border: 1px solid #d3dbe0;
       font-size: 0.85rem;
       color: #444;
+    }
+
+    .primary-button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      background: #005bbb;
+      color: white;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .primary-button:hover {
+      background: #004799;
     }
 
     /* SECTION CARDS */
@@ -88,10 +156,16 @@
 
     ul {
       padding-left: 20px;
+      margin: 8px 0 0 0;
     }
 
     li {
       margin-bottom: 8px;
+    }
+
+    .subtle {
+      font-size: 0.9rem;
+      color: #666;
     }
 
     a {
@@ -109,10 +183,44 @@
       font-size: 0.85rem;
       color: #777;
     }
+
+    @media (max-width: 700px) {
+      .top-nav-inner {
+        padding-inline: 16px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      header {
+        padding-inline: 16px;
+      }
+
+      section {
+        padding-inline: 18px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <div class="top-nav">
+    <div class="top-nav-inner">
+      <div class="nav-brand">ALEX AYALA</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#now">Now</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#recruiters">For Recruiters</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
   <div class="page">
 
     <header>
@@ -124,9 +232,15 @@
         <div class="pill">Communicating with empathy</div>
         <div class="pill">Leading with integrity</div>
       </div>
+
+      <!-- This will work once you add resume.pdf to the repo -->
+      <a class="primary-button" href="resume.pdf" target="_blank">
+        Download resume (PDF)
+      </a>
     </header>
 
-    <section>
+    <!-- ABOUT -->
+    <section id="about">
       <div class="label">About</div>
       <h2>Who I Am</h2>
       <p>
@@ -136,32 +250,23 @@
       </p>
     </section>
 
-    <section>
-      <div class="label">Right Now</div>
-      <h2>What I’m Working On</h2>
+    <!-- NOW -->
+    <section id="now">
+      <div class="label">Now</div>
+      <h2>What I’m Focused On</h2>
       <ul>
-        <li><strong>Solar Scrubber</strong> — autonomous solar panel cleaning robot with tracked drive, hoist safety, and dual-sensor edge detection.</li>
-        <li><strong>FPV Drone Controls</strong> — custom frames, PID tuning, MATLAB simulation, and optimization workflows.</li>
-        <li><strong>MBA Lightning Track</strong> — bridging engineering and business to prepare for leadership roles.</li>
+        <li>Leading the Solar Scrubber senior design robot project as project manager.</li>
+        <li>Developing controls, PID tuning, and testing workflows for a custom FPV drone platform.</li>
+        <li>Progressing through the MTSU MBA Lightning Track to better connect engineering and business.</li>
+        <li>Building a portfolio that showcases both technical depth and strong communication skills.</li>
       </ul>
-    </section>
-
-    <section>
-      <div class="label">Contact</div>
-      <h2>Say Hello</h2>
-      <p>
-        Connect with me on LinkedIn:<br>
-        <a href="https://www.linkedin.com/in/alexayalaengineer" target="_blank">
-          linkedin.com/in/alexayalaengineer
-        </a>
+      <p class="subtle">
+        This “Now” section is a snapshot of where my time and energy are going currently.
       </p>
     </section>
 
-    <footer>
-      Built by Alex Ayala · Hosted on GitHub Pages
-    </footer>
-
-  </div>
-</body>
-</html>
-
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="label">Projects</div>
+      <h2>Selected Engineering Projects</h2>
+      <ul
