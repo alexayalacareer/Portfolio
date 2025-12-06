@@ -127,24 +127,21 @@
     }
 
     /* ===========================
-       SLOGAN BAND (DARK GRAY)
+       SLOGAN IMAGE BANNER
        =========================== */
-    .motto-band {
-      background: #6b6b6b;
-      color: #ffffff;
-      padding: 40px 40px 46px;
+    .slogan-section {
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+      border: none;
+      background: transparent;
     }
 
-    .motto-line {
-      margin: 0 0 16px 0;
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-    }
-
-    .motto-strong {
-      font-weight: 700;
-      font-size: 2.3rem;
+    .slogan-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #d0d0d0;
     }
 
     /* ===========================
@@ -234,18 +231,6 @@
         margin-top: 24px;
         align-self: center;
       }
-
-      .motto-band {
-        padding: 28px 24px 32px;
-      }
-
-      .motto-line {
-        font-size: 1.6rem;
-      }
-
-      .motto-strong {
-        font-size: 2rem;
-      }
     }
 
     @media (max-width: 700px) {
@@ -299,11 +284,10 @@
       </div>
     </header>
 
-    <!-- SLOGAN BAND -->
-    <section class="motto-band">
-      <p class="motto-line">Design with <span class="motto-strong">Ingenuity</span></p>
-      <p class="motto-line">Communicate with <span class="motto-strong">Clarity</span></p>
-      <p class="motto-line">Lead with <span class="motto-strong">Integrity</span></p>
+    <!-- SLOGAN IMAGE BANNER -->
+    <section class="slogan-section">
+      <img src="slogan-banner.png"
+           alt="Design with Ingenuity, Communicate with Clarity, Lead with Integrity">
     </section>
 
     <!-- BELOW THE FOLD SECTIONS -->
@@ -331,11 +315,11 @@
         </li>
 
         <li><strong>PLC and Automation Lab Systems</strong><br>
-          Siemens S7 300 and Festo industrial automation with sensors, actuators, and control sequences.
+          Siemens S7-300 and Festo industrial automation with sensors, actuators, and control sequences.
         </li>
 
         <li><strong>CAD and Mechanical Design</strong><br>
-          SolidWorks and Onshape parts and manufacturing ready assemblies.
+          SolidWorks and Onshape parts and manufacturing-ready assemblies.
         </li>
       </ul>
     </section>
@@ -394,3 +378,4 @@
 </body>
 
 </html>
+
