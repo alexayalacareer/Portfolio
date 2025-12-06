@@ -26,17 +26,26 @@
     }
 
     /* ===========================
-       TOP NAVIGATION
+       TOP NAVIGATION (with fade)
        =========================== */
     .top-nav {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: #1f57a4; /* MTSU style blue */
-      border-bottom: 1px solid #143b6f;
+      background: rgba(31, 87, 164, 0.55); /* translucent MTSU blue */
+      border-bottom: 1px solid rgba(20, 59, 111, 0.7);
       height: 72px;
       display: flex;
       align-items: center;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .top-nav.scrolled {
+      background: #1f57a4; /* solid blue when scrolled */
+      border-bottom-color: #143b6f;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
     }
 
     .top-nav-inner {
@@ -70,7 +79,7 @@
     }
 
     /* ===========================
-       HERO HEADER (TOP BLOCK)
+       HERO HEADER (INTRO BOX)
        =========================== */
     .hero {
       display: flex;
@@ -112,7 +121,6 @@
       display: block;
     }
 
-    /* photo circle on the right */
     .hero-right {
       display: flex;
       justify-content: center;
@@ -144,82 +152,6 @@
       border-bottom: 1px solid #d0d0d0;
     }
 
-    /* ===========================
-       SECTIONS BELOW
-       =========================== */
-    section {
-      background: white;
-      padding: 28px 24px;
-      border-radius: 16px;
-      margin: 28px 0;
-      border: 1px solid #e6e6e6;
-    }
-
-    .label {
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      color: #888;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    h2 {
-      margin: 0 0 14px 0;
-      font-size: 1.4rem;
-      color: #005bbb;
-    }
-
-    p,
-    li {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin: 8px 0;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .subtle {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    a {
-      color: #005bbb;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .primary-button {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      background: #005bbb;
-      color: #fff;
-      font-weight: 500;
-      text-decoration: none;
-    }
-
-    .primary-button:hover {
-      background: #004799;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: #777;
-    }
-
     @media (max-width: 900px) {
       .hero {
         flex-direction: column;
@@ -240,7 +172,7 @@
         font-size: 1rem;
       }
 
-      section {
+      .page {
         padding-inline: 18px;
       }
     }
@@ -265,7 +197,7 @@
 
   <div class="page">
 
-    <!-- HERO HEADER -->
+    <!-- HERO HEADER (INTRO BOX) -->
     <header class="hero">
       <div class="hero-left">
         <h1>Hello! I’m Alex Ayala</h1>
@@ -284,98 +216,28 @@
       </div>
     </header>
 
-    <!-- SLOGAN IMAGE BANNER -->
+    <!-- SLOGAN IMAGE BANNER ONLY -->
     <section class="slogan-section">
       <img src="slogan-image.png"
            alt="Design with Ingenuity, Communicate with Clarity, Lead with Integrity">
     </section>
 
-    <!-- BELOW THE FOLD SECTIONS -->
-    <section id="about">
-      <div class="label">About</div>
-      <h2>Who I Am</h2>
-      <p>
-        I am a Mechatronics Engineering and MBA student at Middle Tennessee State University.
-        I focus on turning unclear real world problems into structured,
-        testable engineering solutions that combine mechanical design, automation,
-        controls, and business strategy.
-      </p>
-    </section>
-
-    <section id="projects">
-      <div class="label">Projects</div>
-      <h2>Selected Engineering Projects</h2>
-      <ul>
-        <li><strong>Solar Scrubber: Autonomous Solar Panel Cleaning Robot</strong><br>
-          Tracked robot with dual sensor edge detection, hoist system, and brush plus spray cleaning module.
-        </li>
-
-        <li><strong>FPV Drone Controls and Optimization</strong><br>
-          Custom quadcopter with PID tuning, MATLAB modeling, and 3D printed frame iterations.
-        </li>
-
-        <li><strong>PLC and Automation Lab Systems</strong><br>
-          Siemens S7-300 and Festo industrial automation with sensors, actuators, and control sequences.
-        </li>
-
-        <li><strong>CAD and Mechanical Design</strong><br>
-          SolidWorks and Onshape parts and manufacturing-ready assemblies.
-        </li>
-      </ul>
-    </section>
-
-    <section id="experience">
-      <div class="label">Experience</div>
-      <h2>Experience and Leadership</h2>
-      <p class="subtle">Expanded details coming soon.</p>
-      <ul>
-        <li><strong>[Role / Company]</strong> — description coming soon.</li>
-        <li><strong>[Leadership Experience]</strong> — description coming soon.</li>
-        <li><strong>[Other Relevant Work]</strong> — description coming soon.</li>
-      </ul>
-    </section>
-
-    <section id="recruiters">
-      <div class="label">For Recruiters</div>
-      <h2>What I’m Looking For</h2>
-      <p>
-        Seeking engineering internship opportunities starting 2026 in mechatronics,
-        robotics, controls, or product development.
-      </p>
-      <p>
-        Technical strengths include CAD, controls, MATLAB, PLC automation,
-        and multidisciplinary project leadership through the MBA Lightning Track.
-      </p>
-      <p>Based in Tennessee and open to relocation.</p>
-    </section>
-
-    <section id="resume">
-      <div class="label">Resume</div>
-      <h2>Resume and Documents</h2>
-      <a class="primary-button" href="resume.pdf" target="_blank">Download resume (PDF)</a>
-      <p class="subtle">Expanded information is available throughout this site.</p>
-    </section>
-
-    <section id="contact">
-      <div class="label">Contact</div>
-      <h2>Say Hello</h2>
-      <p>
-        LinkedIn:<br>
-        <a href="https://www.linkedin.com/in/alexayalaengineer" target="_blank">
-          linkedin.com/in/alexayalaengineer
-        </a>
-      </p>
-
-      <p>Email: <a href="mailto:youremail@email.com">youremail@email.com</a></p>
-      <p>Phone: (xxx) xxx xxxx</p>
-    </section>
-
-    <footer>
-      Built by Alex Ayala · Hosted on GitHub Pages
-    </footer>
-
   </div>
+
+  <!-- NAV FADE ON SCROLL SCRIPT -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const nav = document.querySelector('.top-nav');
+      if (!nav) return;
+      if (window.scrollY > 10) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 
 </html>
+
 
