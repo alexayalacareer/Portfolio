@@ -111,11 +111,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--card-bg);
+      background: linear-gradient(135deg, #ffffff 0%, #f5f7fb 100%);
       padding: 60px 40px;
       margin-top: 32px;
       border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
       border: 1px solid rgba(20, 59, 111, 0.06);
       overflow: hidden;
     }
@@ -132,6 +132,7 @@
     .hero-hello {
       font-size: 5rem;
       font-weight: 800;
+      color: #111111;
       margin: 0 0 4px 0;
       line-height: 1.02;
     }
@@ -147,11 +148,13 @@
     .hero-im {
       font-size: 1rem;
       font-weight: 400;
+      color: #808080;
     }
 
     .hero-name {
       font-size: 2.6rem;
       font-weight: 800;
+      color: var(--accent);
     }
 
     .hero-role {
@@ -162,27 +165,22 @@
       line-height: 1.2;
     }
 
-    .hero-major {
+    .hero-major,
+    .hero-mba {
       font-size: 2rem;
-      font-weight: 600;
-      color: #666666;
+      font-weight: 500;
+      color: #444444;
     }
 
     .hero-and {
       font-size: 1rem;
       font-weight: 400;
-      color: #666666;
+      color: #808080;
     }
 
     .hero-mba-line {
       margin: 4px 0 0 0;
       line-height: 1.2;
-    }
-
-    .hero-mba {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #666666;
     }
 
     .hero-school-row {
@@ -262,13 +260,13 @@
     }
 
     .profile-photo {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ffffff;
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22);
-}
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22);
+    }
 
     /* Slogan banner */
     .slogan-section img {
@@ -334,7 +332,7 @@
       </div>
 
       <div class="hero-right">
-        <img src="Headshot2.png" alt="Alex Ayala Headshot" class="profile-photo"/>
+        <img src="Headshot2.png" alt="Alex Ayala Headshot" class="profile-photo" />
       </div>
     </header>
 
