@@ -1,1 +1,130 @@
 <link rel="stylesheet" href="styles.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Alex Ayala</title>
+
+  <!-- Shared site styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <div class="top-nav">
+    <div class="top-nav-inner">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html" class="active">Experience</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <div class="page">
+    <h1>Experience</h1>
+
+    <!-- EXPERIENCE BLOCK -->
+    <div class="experience-block">
+      <h2>Engineering & Technical Experience</h2>
+
+      <h3>Senior Design – Solar Scrubber Project</h3>
+      <p class="experience-meta">
+        Mechatronics Engineering • Middle Tennessee State University
+      </p>
+      <ul>
+        <li>
+          Designed and developed a tracked, hoist assisted robotic system for
+          automated solar panel cleaning.
+        </li>
+        <li>
+          Integrated mechanical, electrical, and control subsystems including
+          motors, sensors, and embedded controllers.
+        </li>
+        <li>
+          Collaborated within a multidisciplinary team to manage requirements,
+          testing, and iterative design improvements.
+        </li>
+      </ul>
+
+      <h3>Controls & Optimization – FPV Drone Project</h3>
+      <p class="experience-meta">
+        Controls Engineering • MTSU
+      </p>
+      <ul>
+        <li>
+          Built and tested a custom FPV quadcopter platform with 3D printed
+          components.
+        </li>
+        <li>
+          Implemented PID tuning and flight control optimization using Betaflight.
+        </li>
+        <li>
+          Analyzed system dynamics and performance through simulation and
+          experimental testing.
+        </li>
+      </ul>
+    </div>
+
+    <!-- EXPERIENCE BLOCK -->
+    <div class="experience-block">
+      <h2>Professional & Leadership Experience</h2>
+
+      <h3>Study Abroad Program Coordinator</h3>
+      <p class="experience-meta">
+        Middle Tennessee State University
+      </p>
+      <ul>
+        <li>
+          Supported international study programs by coordinating logistics,
+          schedules, and communication across departments.
+        </li>
+        <li>
+          Served as a liaison between students, faculty, and administrators to
+          ensure smooth program execution.
+        </li>
+        <li>
+          Managed documentation, timelines, and compliance requirements.
+        </li>
+      </ul>
+
+      <h3>Project & Administrative Support Roles</h3>
+      <ul>
+        <li>
+          Assisted with project coordination, documentation, and stakeholder
+          communication in academic and professional settings.
+        </li>
+        <li>
+          Known for attention to detail, organization, and calm execution under
+          time constraints.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="fun-footer">
+    © 2025 Designed and Built by Alex Ayala •
+    <a href="contact.html">Contact</a> •
+    😊 Have a great day!
+  </footer>
+
+  <!-- Nav scroll effect -->
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector(".top-nav");
+      if (window.scrollY > 10) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>
