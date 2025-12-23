@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="styles.css">
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume | Alex Ayala</title>
+    <title>Projects | Alex Ayala</title>
 
     <!-- Shared site styles -->
     <link rel="stylesheet" href="styles.css" />
@@ -18,9 +16,9 @@
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
+          <a href="projects.html" class="active">Projects</a>
           <a href="experience.html">Experience</a>
-          <a href="resume.html" class="active">Resume</a>
+          <a href="resume.html">Resume</a>
           <a href="contact.html">Contact</a>
         </div>
       </div>
@@ -28,66 +26,96 @@
 
     <!-- PAGE CONTENT -->
     <div class="page">
-      <h1>Resume</h1>
+      <h1>Projects</h1>
 
       <p>
-        Mechatronics Engineering &amp; MBA student at Middle Tennessee State University,
-        focused on systems design, controls, and engineering-driven product development.
-        I enjoy building practical solutions that blend technical execution with clear communication.
+        A selection of work spanning mechatronics, controls, prototyping, and
+        engineering driven product development. Each project highlights a clear
+        problem, the approach I took, and the result.
       </p>
 
-      <!-- Optional: add a PDF later (recommended) -->
-      <p>
-        <strong>Download:</strong>
-        <a href="Alex_Ayala_Resume.pdf">Alex_Ayala_Resume.pdf</a>
-        <span>(upload this file to your repo when ready)</span>
-      </p>
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h2>Solar Scrubber (Senior Design)</h2>
+        <p>
+          A tracked, hoist assisted solar panel cleaning robot designed for safe
+          rooftop operation. Focus areas include mechanical design, sensors,
+          water and brush subsystems, and embedded control.
+        </p>
+        <ul>
+          <li><strong>Role:</strong> Systems design, integration, documentation</li>
+          <li><strong>Tools:</strong> CAD, prototyping, testing, embedded systems</li>
+          <li><strong>Highlights:</strong> Modular subsystems, safety focused design, iterative testing</li>
+        </ul>
+        <p class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub Repo (add link)</a>
+          <span> • </span>
+          <a href="#" target="_blank" rel="noopener">Demo Video (add link)</a>
+        </p>
+      </div>
 
-      <hr />
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h2>FPV Drone (Controls and Optimization)</h2>
+        <p>
+          A custom quadcopter platform used to explore tuning, stability, and
+          real world control behavior. Emphasis on test planning, configuration,
+          and translating theory into repeatable results.
+        </p>
+        <ul>
+          <li><strong>Role:</strong> Controls setup, tuning plan, testing and analysis</li>
+          <li><strong>Tools:</strong> Betaflight, embedded electronics, rapid iteration</li>
+          <li><strong>Highlights:</strong> Baseline testing, configuration management, performance tracking</li>
+        </ul>
+        <p class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub Repo (add link)</a>
+          <span> • </span>
+          <a href="#" target="_blank" rel="noopener">Demo Video (add link)</a>
+        </p>
+      </div>
 
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <strong>Middle Tennessee State University</strong> — B.S. Mechatronics Engineering (In Progress)
-        </li>
-        <li>
-          <strong>Middle Tennessee State University</strong> — MBA (In Progress)
-        </li>
-      </ul>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h2>LIVEbolt (Smart Lock Retrofit Concept)</h2>
+        <p>
+          A removable smart lock add on for renters who want app based access
+          without permanent installation or property damage. Designed to
+          preserve standard key use while adding smart functionality.
+        </p>
+        <ul>
+          <li><strong>Role:</strong> Concept development, prototyping, design iteration</li>
+          <li><strong>Constraints:</strong> No damage install, removable, presentable, public facing</li>
+          <li><strong>Highlights:</strong> User centered constraints, packaging refinement, multiple prototypes</li>
+        </ul>
+        <p class="project-links">
+          <a href="#" target="_blank" rel="noopener">Project Write Up (add link)</a>
+          <span> • </span>
+          <a href="#" target="_blank" rel="noopener">Images (add link)</a>
+        </p>
+      </div>
 
-      <h2>Core Skills</h2>
-      <ul>
-        <li><strong>Engineering:</strong> Systems design, controls, prototyping, testing, documentation</li>
-        <li><strong>Tools:</strong> CAD, spreadsheets, presentations, technical writing</li>
-        <li><strong>Professional:</strong> Team collaboration, project coordination, stakeholder communication</li>
-      </ul>
-
-      <h2>Experience Highlights</h2>
-      <ul>
-        <li>
-          Built and improved mechanical/electrical systems through hands-on work, iteration, and troubleshooting.
-        </li>
-        <li>
-          Supported projects by organizing tasks, tracking progress, and communicating updates clearly.
-        </li>
-        <li>
-          Combined technical problem-solving with a business mindset to keep solutions practical and user-focused.
-        </li>
-      </ul>
-
-      <h2>Projects</h2>
-      <p>
-        See my featured work on the <a href="projects.html">Projects</a> page.
-      </p>
-
-      <h2>Certifications &amp; Involvement</h2>
-      <ul>
-        <li>Add certifications here (if applicable)</li>
-        <li>Add clubs/teams/organizations here (if applicable)</li>
-      </ul>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h2>MATLAB Kinematics 6 Bar Mechanism</h2>
+        <p>
+          Modeled and analyzed a multi link mechanism using MATLAB to study
+          kinematics, motion behavior, and parameter sensitivity.
+        </p>
+        <ul>
+          <li><strong>Role:</strong> Modeling, analysis, visualization</li>
+          <li><strong>Tools:</strong> MATLAB</li>
+          <li><strong>Highlights:</strong> Clear plots, repeatable workflow, engineering documentation</li>
+        </ul>
+        <p class="project-links">
+          <a href="#" target="_blank" rel="noopener">Code (add link)</a>
+          <span> • </span>
+          <a href="#" target="_blank" rel="noopener">Report (add link)</a>
+        </p>
+      </div>
 
       <p style="margin-top: 22px;">
-        Want a one-page, recruiter-friendly PDF version? I can format one to match your site style.
+        Want a deep dive on any project? I can add photo heavy sections with captions,
+        CAD screenshots, test results, and short punchy descriptions.
       </p>
     </div>
 
