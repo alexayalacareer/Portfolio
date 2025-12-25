@@ -431,7 +431,7 @@ p {
 /* ---------------------------
    RESPONSIVE
 ---------------------------- */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
     padding: 26px 18px;
@@ -525,8 +525,10 @@ p {
 
 .hero-left-stack {
   max-width: 520px;
+  min-width: 320px;
   padding-right: 32px;
 }
+
 .hero-title {
   margin: 0 0 12px;
   font-size: 44px;
