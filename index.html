@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alex Ayala | Portfolio</title>
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- NAV -->
   <div class="top-nav">
     <div class="top-nav-inner">
       <div class="nav-links">
@@ -23,64 +21,39 @@
     </div>
   </div>
 
-  <div class="page">
-    <!-- HERO -->
-    <header class="hero">
+  <main class="page">
+    <section class="hero-screenshot">
+      <div class="hero-screenshot-inner">
+        <div class="hero-left-stack">
+          <h1 class="hero-title">Hello! I’m Alex Ayala</h1>
+          <h2 class="hero-subtitle">Mechatronics Engineering<br>&amp; MBA</h2>
 
-      <!-- LEFT COLUMN -->
-      <div class="hero-left">
+          <p class="hero-mini">Student at MTSU</p>
 
-        <!-- LOCKED HERO TEXT IMAGE -->
-        <img
-          src="HeroText.png"
-          alt="Hello, I'm Alex Ayala — Student at Middle Tennessee State University"
-          class="hero-text-image"
-        />
+          <div class="hero-buttons-row">
+            <a class="btn-pill btn-red" href="resume.html">Resume</a>
+            <a class="btn-pill btn-gray" href="projects.html">Projects</a>
+          </div>
 
-        <!-- BUTTONS (ALWAYS BELOW TEXT IMAGE) -->
-        <div class="hero-buttons">
-          <a href="resume.html" class="resume-button">Resume</a>
-          <a href="projects.html" class="projects-button">Projects</a>
+          <img class="mtsu-mark" src="mtsu-logo.png" alt="MTSU logo" />
         </div>
 
+        <div class="hero-right-circle">
+          <img src="Headshot2.png" alt="Alex Ayala headshot" />
+        </div>
       </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="hero-right">
-        <img
-          src="Headshot2.png"
-          alt="Alex Ayala Headshot"
-          class="profile-photo"
-        />
-      </div>
-
-    </header>
-
-    <!-- SLOGAN -->
-    <section class="slogan-section">
-      <img
-        src="slogan-image.png"
-        alt="Designing with Ingenuity | Communicating with Empathy | Leading with Integrity"
-      />
     </section>
-  </div>
+  </main>
 
-  <!-- FOOTER -->
   <footer class="fun-footer">
-    © 2025 Designed and Built by Alex Ayala •
-    <a href="contact.html">Contact</a> •
-    😊 Have a great day!
+    © 2025 Designed and Built by Alex Ayala • <a href="contact.html">Contact</a> • 😊 Have a great day!
   </footer>
 
-  <!-- Nav scroll effect -->
   <script>
     window.addEventListener("scroll", function () {
       const nav = document.querySelector(".top-nav");
-      if (window.scrollY > 10) {
-        nav.classList.add("scrolled");
-      } else {
-        nav.classList.remove("scrolled");
-      }
+      if (window.scrollY > 10) nav.classList.add("scrolled");
+      else nav.classList.remove("scrolled");
     });
   </script>
 </body>
