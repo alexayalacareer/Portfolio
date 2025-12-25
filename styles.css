@@ -603,6 +603,7 @@ p {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
+   transform: translateY(-1px);
   filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.18));
 }
 
