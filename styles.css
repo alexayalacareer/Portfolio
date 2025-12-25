@@ -579,23 +579,40 @@ p {
   text-decoration: none;
   letter-spacing: 0.2px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .btn-pill:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.btn-red:hover {
+  box-shadow:
+    0 14px 28px rgba(179, 25, 25, 0.35),
+    0 0 0 2px rgba(179, 25, 25, 0.14);
+}
+
+.btn-gray:hover {
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.18),
+    0 0 0 2px rgba(91, 91, 91, 0.18);
+}
+
+.btn-pill:active {
+  transform: translateY(1px) scale(0.98);
 }
 
 .btn-red {
-  background: #b31919;
+  background: linear-gradient(135deg, #b31919, #8f1414);
   color: #ffffff;
 }
 
 .btn-gray {
-  background: #5b5b5b;
+  background: linear-gradient(135deg, #5b5b5b, #3f3f3f);
   color: #ffffff;
 }
+
 
 .hero-mini-row {
   display: flex;
