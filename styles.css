@@ -89,6 +89,7 @@ a {
 
 /* ---------------------------
    HERO (HOME)
+   Older hero system. Safe to keep.
 ---------------------------- */
 .hero {
   display: grid;
@@ -101,7 +102,6 @@ a {
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
   border: 1px solid rgba(15, 23, 42, 0.06);
 
-  /* needed for the background image overlay */
   position: relative;
   overflow: hidden;
 }
@@ -115,7 +115,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2; /* 20% opacity */
+  opacity: 0.2;
   z-index: 0;
   pointer-events: none;
 }
@@ -475,3 +475,166 @@ p {
   }
 }
 
+/* ---------------------------
+   HOME HERO (REFERENCE SCREENSHOT LAYOUT)
+   This is the one index.html is using now:
+   .hero-screenshot, .hero-screenshot-inner, etc.
+---------------------------- */
+.hero-screenshot {
+  margin: 0 auto;
+  padding: 10px 0 18px;
+  max-width: 1100px;
+}
+
+.hero-screenshot-inner {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 420px;
+  padding: 44px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-image: url("TbilisiPhoto.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background-color: #ffffff;
+}
+
+/* soft overlay so text pops */
+.hero-screenshot-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.hero-left-stack,
+.hero-right-circle {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-left-stack {
+  max-width: 520px;
+}
+
+.hero-title {
+  margin: 0 0 12px;
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #2c2c2c;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.35);
+}
+
+.hero-subtitle {
+  margin: 0 0 18px;
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 750;
+  color: #3b3b3b;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.35);
+}
+
+.hero-mini {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.hero-buttons-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 140px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+.btn-red {
+  background: #b31919;
+  color: #ffffff;
+}
+
+.btn-gray {
+  background: #5b5b5b;
+  color: #ffffff;
+}
+
+.mtsu-mark {
+  display: block;
+  margin-top: 18px;
+  height: 46px;
+  width: auto;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.18));
+}
+
+/* right big circle headshot */
+.hero-right-circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 10px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  border: 6px solid rgba(255, 255, 255, 0.9);
+}
+
+.hero-right-circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .hero-screenshot-inner {
+    padding: 28px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    min-height: 520px;
+  }
+
+  .hero-right-circle {
+    width: 220px;
+    height: 220px;
+    align-self: center;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-subtitle {
+    font-size: 28px;
+  }
+}
