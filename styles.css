@@ -663,9 +663,13 @@ p {
 
 .hero-button-row {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content: flex-start;   /* LEFT align buttons */
+  align-items: center;
+  gap: 16px;                     /* space BETWEEN buttons */
   margin-top: 18px;
+
+  margin-left: 0;                /* control left offset */
   flex-wrap: wrap;
 }
+
 
