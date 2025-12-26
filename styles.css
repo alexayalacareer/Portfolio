@@ -519,9 +519,9 @@ p {
 /* Resume summary (professional statement) */
 .resume-summary p {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #000000;
-  line-height: 1.15;
+  line-height: 1.25;
   margin: 10px 0 0;
 }
 
@@ -619,7 +619,7 @@ p {
 
 /* Consistent spacing after each role */
 .resume-bullets {
-  margin: 5px 0 25px 0;
+  margin: 5px 0 18px 0;
   padding-left: 18px;
   color: #000000;
   font-size: 1rem;
