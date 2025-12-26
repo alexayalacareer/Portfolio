@@ -542,7 +542,7 @@ p {
 
 /* small spacing between stacked degrees */
 .resume-entry + .resume-entry {
-  margin-top: 6px;
+  margin-top: 2px;
 }
 
 /* BIG spacing after the first degree block (MBA) */
