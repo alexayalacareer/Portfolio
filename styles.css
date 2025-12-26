@@ -536,13 +536,9 @@ p {
   margin-left: 0px;
 }
 
-.resume-entry {
-  margin-top: 15px; /* default big gap between entries */
-}
-
-/* small spacing between stacked degrees */
-.resume-entry + .resume-entry {
-  margin-top: 2px;
+/* Big gap after each job */
+.resume-bullets {
+  margin-bottom: 22px;
 }
 
 /* BIG spacing after the first degree block (MBA) */
