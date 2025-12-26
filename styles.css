@@ -520,7 +520,7 @@ p {
 
 .resume-h2 {
   margin: 0 0 10px;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   letter-spacing: 0.6px;
   color: #073763;
   font-weight: 1500;
@@ -537,12 +537,18 @@ p {
 }
 
 .resume-entry {
-  margin-top: 15px;
+  margin-top: 15px; /* default big gap between entries */
 }
 
-/* Remove extra gap between stacked education entries */
+/* small gap between school line and the next degree */
 .resume-entry-sub + .resume-entry {
   margin-top: 6px;
+}
+
+/* BIG gap only after the FIRST education entry (MBA) */
+.resume-section .resume-entry:first-of-type .resume-entry-sub {
+  margin-bottom: 14px;
+  display: block;
 }
 
 .resume-entry-top {
