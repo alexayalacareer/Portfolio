@@ -513,7 +513,6 @@ p {
   margin-top: 10px;
 }
 
-
 /* Sections */
 .resume-section {
   margin-top: 18px;
@@ -524,7 +523,7 @@ p {
   font-size: 1.4rem;
   letter-spacing: 0.6px;
   color: #073763;
-  font-weight: 1100;
+  font-weight: 1500;
 }
 
 .resume-h2::after {
@@ -550,8 +549,8 @@ p {
 }
 
 .resume-entry-title {
-  font-weight: 850;
-  color: #0f172a;
+  font-weight: 1000;
+  color: #000000;
 }
 
 .resume-entry-date {
