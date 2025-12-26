@@ -531,15 +531,12 @@ p {
 .resume-h2::after {
   content: "";
   display: block;
-  width: calc(100% - 18px);  /* full width minus padding */
+  width: calc(100% - 10px);  /* full width minus padding */
   height: 2px;
   background-color: #073763;
   margin-top: 4px;
   margin-left: 12px;
 }
-
-
-
 
 .resume-entry {
   margin-top: 12px;
