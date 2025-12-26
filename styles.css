@@ -469,14 +469,9 @@ p {
   padding: 34px 38px;
 }
 
-/* Header */
 .resume-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
   padding-bottom: 14px;
-  border-bottom: 4px solid rgba(15, 23, 42, 0.10);
+  border-bottom: none;
 }
 
 .resume-name {
