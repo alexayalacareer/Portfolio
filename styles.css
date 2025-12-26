@@ -665,7 +665,7 @@ p {
   padding-left: 0;
   list-style: none;
   display: grid;
-  gap: 0px;
+  gap: 2px;
 }
 
 .resume-certs li {
