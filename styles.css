@@ -520,7 +520,7 @@ p {
 
 .resume-h2 {
   margin: 0 0 10px;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   letter-spacing: 0.6px;
   color: #073763;
   font-weight: 1500;
@@ -550,7 +550,7 @@ p {
 
 .resume-entry-title {
   font-family: "Montserrat", sans-serif;  /* font family */
-  font-size: 1.3rem;                      /* size (≈ 14–15pt) */
+  font-size: 1.5rem;                      /* size (≈ 14–15pt) */
   font-weight: 1000;                       /* thickness */
   color: #000000;                         /* color */
   line-height: 1.15;   
