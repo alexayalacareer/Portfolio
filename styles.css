@@ -537,12 +537,7 @@ p {
 }
 
 /* Big gap after each job */
-.resume-bullets {
-  margin-bottom: 22px;
-   color: #000000 
-   font-size: 1rem;
-   font-weight: 400;
-}
+
 
 /* BIG spacing after the first degree block (MBA) */
 .resume-entry:first-of-type {
@@ -609,22 +604,16 @@ p {
   line-height: 1.6;
 }
 
-/* Bullets */
+/* Consistent spacing after each role */
 .resume-bullets {
-  margin: 8px 0 0;
+  margin: 10px 0 26px;
   padding-left: 18px;
   color: #000000;
-   font-weight: 400;
-   font-size: 1rem;  /* color */
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.65;
 }
 
-.resume-bullets.tight {
-  margin-top: 6px;
-   color: #000000;
-   font-weight: 400;
-   font-size: 1rem;  /* color */
-}
 
 /* Skills grid */
 .resume-skills {
