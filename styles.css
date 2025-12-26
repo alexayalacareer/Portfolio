@@ -524,18 +524,20 @@ p {
   font-size: 1.02rem;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: #3c3f42;
+  color: #073763;
   font-weight: 900;
 }
 
 .resume-h2::after {
   content: "";
   display: block;
-  width: 60px;
+  width: calc(100% - 24px);  /* full width minus padding */
   height: 2px;
   background-color: #073763;
   margin-top: 6px;
+  margin-left: 12px;
 }
+
 
 
 
