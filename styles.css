@@ -521,12 +521,23 @@ p {
 
 .resume-h2 {
   margin: 0 0 10px;
-  font-size: 1.4rem;
+  font-size: 1.02rem;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  color: #073763;
+  color: #3c3f42;
   font-weight: 900;
 }
+
+.resume-h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #073763;
+  margin-top: 6px;
+}
+
+
 
 .resume-entry {
   margin-top: 12px;
