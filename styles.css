@@ -540,15 +540,14 @@ p {
   margin-top: 15px; /* default big gap between entries */
 }
 
-/* small gap between school line and the next degree */
-.resume-entry-sub + .resume-entry {
+/* small spacing between stacked degrees */
+.resume-entry + .resume-entry {
   margin-top: 6px;
 }
 
-/* BIG gap only after the FIRST education entry (MBA) */
-.resume-section .resume-entry:first-of-type .resume-entry-sub {
-  margin-bottom: 14px;
-  display: block;
+/* BIG spacing after the first degree block (MBA) */
+.resume-entry:first-of-type {
+  margin-bottom: 18px;
 }
 
 .resume-entry-top {
