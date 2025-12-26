@@ -425,6 +425,55 @@ a {
   border: 1px solid rgba(31, 87, 164, 0.12);
 }
 
+/* ============================
+   GUIDING PRINCIPLES COLOR THEMES
+============================ */
+
+/* Shared text color (soft black) */
+.principle-row {
+  color: #0f172a;
+}
+
+/* =====================
+   INGENUITY – Deep Blue
+===================== */
+.principle-row.ingenuity {
+  background: #eef2ff;
+  border-color: rgba(30, 58, 138, 0.18);
+}
+
+.principle-row.ingenuity .principle-def {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+/* =====================
+   CLARITY – Teal
+===================== */
+.principle-row.clarity {
+  background: #ecfdf5;
+  border-color: rgba(6, 95, 70, 0.18);
+}
+
+.principle-row.clarity .principle-def {
+  background: #065f46;
+  color: #ffffff;
+}
+
+/* =====================
+   INTEGRITY – Violet
+===================== */
+.principle-row.integrity {
+  background: #f5f3ff;
+  border-color: rgba(76, 29, 149, 0.18);
+}
+
+.principle-row.integrity .principle-def {
+  background: #4c1d95;
+  color: #ffffff;
+}
+
+
 .principle-row.flip {
   grid-template-columns: 0.75fr 1.25fr;
 }
