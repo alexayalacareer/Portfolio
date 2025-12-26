@@ -597,11 +597,11 @@ p {
 
 
 .resume-note {
-  margin: 8px 0 0;
+  margin: 5px 0 0;
   color: #000000;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.25;
 }
 
 /* Consistent spacing after each role */
