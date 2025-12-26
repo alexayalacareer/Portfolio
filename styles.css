@@ -521,7 +521,7 @@ p {
   font-size: 1rem;
   font-weight: 400;
   color: #000000;
-  line-height: 1.25;
+  line-height: 1.4;
   margin: 10px 0 0;
 }
 
@@ -574,7 +574,7 @@ p {
 }
 
 .resume-degree-stack {
-  margin-top: 2px;   /* controls space BETWEEN the two degree lines */
+  margin-top: 3px;   /* controls space BETWEEN the two degree lines */
 }
 
 
@@ -619,7 +619,7 @@ p {
   color: #000000;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* Consistent spacing after each role */
@@ -629,7 +629,7 @@ p {
   color: #000000;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 
