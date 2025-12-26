@@ -573,6 +573,11 @@ p {
   line-height: 1.15;   
 }
 
+.resume-degree-stack {
+  margin-top: 2px;   /* controls space BETWEEN the two degree lines */
+}
+
+
 .resume-entry-date {
   font-style: italic;
   color: #3c3f42;
@@ -614,7 +619,7 @@ p {
   color: #000000;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 /* Consistent spacing after each role */
@@ -624,13 +629,13 @@ p {
   color: #000000;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 
 /* Skills grid */
 .resume-skills {
-  margin: 0;
+  margin: 10px 0 10px 0;
   padding-left: 0;
   list-style: none;
   display: grid;
