@@ -1381,6 +1381,44 @@ p {
   }
 }
 
+/* Make entire tile clickable */
+.contact-tile-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Bigger, more visual icons */
+.contact-icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Text spacing polish */
+.contact-tile-title {
+  margin: 0;
+}
+
+.contact-tile-value,
+.contact-tile-text {
+  margin-top: 6px;
+  line-height: 1.25;
+}
+
+/* Hover / focus polish */
+.contact-tile-link:hover {
+  transform: translateY(-2px);
+}
+
+.contact-tile-link:focus-visible {
+  outline: 3px solid rgba(7, 36, 63, 0.35);
+  outline-offset: 4px;
+  border-radius: 18px;
+}
 
 
 
