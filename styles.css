@@ -1238,106 +1238,149 @@ p {
 }
 
 
-/* ---------------------------
-   CONTACT PAGE
----------------------------- */
+/* ============================
+   CONTACT PAGE (MATCH HOME/ABOUT CARD STYLE)
+============================ */
+
 .contact-page {
   padding-top: 26px;
   padding-bottom: 40px;
 }
 
-.contact-card {
-  max-width: 860px;
+.contact-wrap {
+  max-width: 1100px;
   margin: 0 auto;
-  background: white;
+
+  background: #ffffff;
   border-radius: 18px;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
   border: 1px solid rgba(15, 23, 42, 0.06);
-  padding: 28px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+
+  padding: 26px 28px;
+}
+
+.contact-header {
+  margin-bottom: 18px;
 }
 
 .contact-title {
-  margin: 0 0 10px;
-  font-size: 2.1rem;
+  margin: 0 0 8px;
+  font-size: 2.5rem;
   line-height: 1.15;
   color: #0f172a;
 }
 
-.contact-lede {
-  margin: 0 0 10px;
-  font-size: 1.06rem;
-  line-height: 1.65;
+.contact-subtitle {
+  margin: 0;
   color: #334155;
+  line-height: 1.7;
+  font-size: 1.04rem;
   font-weight: 600;
 }
 
-.contact-sub {
-  margin: 0 0 18px;
-  font-size: 1.04rem;
-  line-height: 1.7;
-  color: #334155;
+/* 2x2 grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 14px;
 }
 
-.contact-location {
-  display: grid;
-  gap: 6px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: rgba(31, 87, 164, 0.06);
-  border: 1px solid rgba(31, 87, 164, 0.16);
-  color: #123a72;
-  font-weight: 650;
-  margin-bottom: 18px;
-}
-
-.contact-info {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 18px;
-}
-
-.contact-row {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 12px;
-  border-radius: 14px;
+/* Each tile (matches hobby-card vibe) */
+.contact-tile {
+  background: rgba(15, 23, 42, 0.02);
   border: 1px solid rgba(15, 23, 42, 0.08);
-  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
-.contact-label {
-  font-weight: 800;
+.contact-tile:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.07);
+}
+
+.contact-tile-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  object-fit: cover;
+
+  /* subtle framed icon look */
+  background: rgba(31, 87, 164, 0.08);
+  border: 1px solid rgba(31, 87, 164, 0.18);
+  padding: 8px;
+}
+
+.contact-tile-title {
+  margin: 0;
+  font-size: 1.35rem;
   color: #0f172a;
+  font-weight: 800;
 }
 
-.contact-value {
+.contact-tile-value {
   color: #123a72;
   text-decoration: none;
-  font-weight: 650;
+  font-weight: 700;
+  line-height: 1.5;
   word-break: break-word;
 }
 
-.contact-value:hover {
+.contact-tile-value:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.contact-actions {
+.contact-tile-text {
+  margin: 0;
+  color: #334155;
+  line-height: 1.65;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-muted {
+  color: #64748b;
+  font-weight: 650;
+}
+
+/* CTA buttons row */
+.contact-cta-row {
+  margin-top: 18px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: 8px;
 }
 
-@media (max-width: 520px) {
-  .contact-row {
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-grid {
     grid-template-columns: 1fr;
-    gap: 6px;
+  }
+
+  .contact-wrap {
+    padding: 22px 18px;
+  }
+
+  .contact-title {
+    font-size: 2.15rem;
   }
 }
+
 
 
 
