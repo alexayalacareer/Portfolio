@@ -24,48 +24,83 @@
     </div>
   </div>
 
-    <!-- PAGE CONTENT -->
-  <main class="page contact-page">
-    <section class="contact-card">
+  <!-- PAGE CONTENT -->
+<main class="page contact-page">
+  <section class="contact-wrap">
+    <!-- Header -->
+    <header class="contact-header">
       <h1 class="contact-title">Contact Me</h1>
-
-      <p class="contact-lede">
+      <p class="contact-subtitle">
         Feel free to reach out regarding opportunities, projects, or professional collaboration.
       </p>
+    </header>
 
-      <div class="contact-info">
-        <div class="contact-row">
-          <div class="contact-label">📧 Email</div>
-          <a class="contact-value" href="mailto:alexanderpatrickayala@gmail.com">alexanderpatrickayala@gmail.com</a>
+    <!-- 2x2 Grid -->
+    <section class="contact-grid" aria-label="Contact information">
+      <!-- Phone (Top Left) -->
+      <article class="contact-tile">
+        <div class="contact-tile-top">
+          <img class="contact-icon" src="PHONE_ICON_PLACEHOLDER.png" alt="" />
+          <h2 class="contact-tile-title">Phone</h2>
         </div>
+        <a class="contact-tile-value" href="tel:16156898478">(615) 689 8478</a>
+      </article>
 
-        <div class="contact-row">
-          <div class="contact-label">📞 Phone</div>
-          <a class="contact-value" href="tel:16156898478">(615) 689 8478</a>
+      <!-- Email (Top Right) -->
+      <article class="contact-tile">
+        <div class="contact-tile-top">
+          <img class="contact-icon" src="EMAIL_ICON_PLACEHOLDER.png" alt="" />
+          <h2 class="contact-tile-title">Email</h2>
         </div>
-
-        <div class="contact-row">
-          <div class="contact-label">🔗 LinkedIn</div>
-          <a class="contact-value" href="https://linkedin.com/in/alexayalaengineer" target="_blank" rel="noopener">
-            linkedin.com/in/alexayalaengineer
-          </a>
-        </div>
-      </div>
-
-      <div class="contact-actions">
-        <a class="btn-pill btn-red" href="mailto:alexanderpatrickayala@gmail.com">✉️ Email Me</a>
-        <a class="btn-pill btn-gray" href="https://linkedin.com/in/alexayalaengineer" target="_blank" rel="noopener">
-          🔗 Connect on LinkedIn
+        <a class="contact-tile-value" href="mailto:alexanderpatrickayala@gmail.com">
+          alexanderpatrickayala@gmail.com
         </a>
-      </div>
+      </article>
 
-      <div class="contact-location">
-        <div>📍 <strong>Based in Murfreesboro, TN</strong></div>
-        <div>🌎 <strong>Open to relocation</strong></div>
-      </div>
-      
+      <!-- Location (Bottom Left) -->
+      <article class="contact-tile">
+        <div class="contact-tile-top">
+          <img class="contact-icon" src="LOCATION_ICON_PLACEHOLDER.png" alt="" />
+          <h2 class="contact-tile-title">Location</h2>
+        </div>
+        <p class="contact-tile-text">
+          Murfreesboro, TN<br />
+          <span class="contact-muted">Open to relocation</span>
+        </p>
+      </article>
+
+      <!-- LinkedIn (Bottom Right) -->
+      <article class="contact-tile">
+        <div class="contact-tile-top">
+          <img class="contact-icon" src="LINKEDIN_ICON_PLACEHOLDER.png" alt="" />
+          <h2 class="contact-tile-title">LinkedIn</h2>
+        </div>
+        <a
+          class="contact-tile-value"
+          href="https://linkedin.com/in/alexayalaengineer"
+          target="_blank"
+          rel="noopener"
+        >
+          linkedin.com/in/alexayalaengineer
+        </a>
+      </article>
     </section>
-  </main>
+
+    <!-- Optional action buttons (matches your pill buttons) -->
+    <div class="contact-cta-row">
+      <a class="btn-pill btn-red" href="mailto:alexanderpatrickayala@gmail.com">✉️ Email Me</a>
+      <a
+        class="btn-pill btn-gray"
+        href="https://linkedin.com/in/alexayalaengineer"
+        target="_blank"
+        rel="noopener"
+      >
+        🔗 Connect on LinkedIn
+      </a>
+    </div>
+  </section>
+</main>
+
 
   <!-- FOOTER -->
   <footer class="fun-footer">
