@@ -1310,22 +1310,28 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 10px;
+  justify-content: center;
+
+  width: 100%;
+  padding: 12px 0;
 }
 
 
 .contact-icon {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
+
   object-fit: contain;
+  border-radius: 50%;
 
-  border-radius: 16px;
-  padding: 10px;
+  /* remove box look */
+  background: transparent;
+  border: none;
+  padding: 0;
 
-  background: rgba(31, 87, 164, 0.08);
-  border: 1px solid rgba(31, 87, 164, 0.18);
+  display: block;
 }
+
 
 
   /* subtle framed icon look */
