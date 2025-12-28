@@ -24,6 +24,12 @@ a {
   padding: 18px 18px 48px;
 }
 
+.page.contact-page {
+  max-width: 1600px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
 /* ---------------------------
    NAV (OLD / SIMPLE)
 ---------------------------- */
