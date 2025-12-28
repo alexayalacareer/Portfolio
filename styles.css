@@ -974,9 +974,11 @@ p {
   text-underline-offset: 3px;
 }
 
+/* Sticky footer layout (safe version) */
 html,
 body {
-  height: 100%;
+  height: auto;       /* don't force 100% height */
+  min-height: 100%;
 }
 
 body {
@@ -985,9 +987,18 @@ body {
   flex-direction: column;
 }
 
-main.page {
-  flex: 1;
+/* prevent header/footer from shrinking or getting weird */
+.top-nav,
+.fun-footer {
+  flex: 0 0 auto;
+  width: 100%;
 }
+
+/* this makes the main content expand and push footer down */
+main.page {
+  flex: 1 0 auto;
+}
+
 
 
 /* ---------------------------
