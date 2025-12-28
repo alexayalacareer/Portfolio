@@ -1363,6 +1363,7 @@ main.page {
   color: #123a72;
   font-weight: 700;
   word-break: break-word;
+  font-size: 1.5rem;
 }
 
 .contact-tile-value:hover {
@@ -1373,14 +1374,14 @@ main.page {
 .contact-tile-text {
   margin: 0;
   color: #334155;
-  line-height: 1.65;
-  font-size: 1.35rem;
+  line-height: 1.35;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .contact-muted {
   color: #64748b;
-  font-weight: 650;
+  font-weight: 500;
 }
 
 
