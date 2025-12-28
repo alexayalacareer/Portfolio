@@ -1345,10 +1345,12 @@ main.page {
   margin-bottom: 14px;
 }
 
+
 .contact-tile-title {
   margin: 0;
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   color: #0f172a;
 }
 
@@ -1356,14 +1358,14 @@ main.page {
 .contact-tile-text {
   margin-top: 6px;
   text-align: center;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .contact-tile-value {
-  color: #123a72;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f3a68;
   word-break: break-word;
-  font-size: 1.5rem;
 }
 
 .contact-tile-value:hover {
@@ -1372,16 +1374,15 @@ main.page {
 }
 
 .contact-tile-text {
-  margin: 0;
-  color: #334155;
-  line-height: 1.35;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #475569;
 }
 
 .contact-muted {
   color: #64748b;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 
