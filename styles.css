@@ -1918,3 +1918,23 @@ main.page {
     margin-right: auto;
   }
 }
+
+
+.figure-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 32px 0;
+}
+
+.figure-row .project-figure {
+  margin: 0;
+}
+
+/* Mobile fallback */
+@media (max-width: 900px) {
+  .figure-row {
+    grid-template-columns: 1fr;
+  }
+}
+
