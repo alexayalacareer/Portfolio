@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automated Pedestrian Crosswalk Warning System | Alex Ayala</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Site styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -22,80 +32,132 @@
       </div>
     </div>
 
-    <main class="page project-detail-page">
-      <header class="project-detail-header">
-        <a class="project-back" href="projects.html">← Back to Projects</a>
-        <h1 class="project-detail-title">Automated Pedestrian Crosswalk Warning System</h1>
-        <p class="project-detail-subtitle">
-          Designed a sensor-driven warning concept focused on visibility, reliability, and clear driver signaling under real conditions.
+    <div class="page">
+      <!-- PROJECT HEADER -->
+      <section class="section-container project-header-card">
+        <a class="project-back-btn" href="projects.html">← Back to Projects</a>
+
+        <h1 class="overview-title project-title">
+          Automated Pedestrian Crosswalk Warning System
+        </h1>
+
+        <p class="project-subtitle">
+          Sensor-based safety system that detects pedestrians and cyclists approaching or entering a crosswalk,
+          activating yellow or red warning lights to alert drivers in low-visibility areas and improve intersection safety.
         </p>
-      </header>
 
-      <section class="project-detail-hero" aria-label="Project hero">
-        <img
-          class="project-detail-image"
-          src="YOUR_CROSSWALK_IMAGE.JPG"
-          alt="Automated Pedestrian Crosswalk Warning System project image"
-        />
-      </section>
+        <p class="project-meta">
+          Fall 2019 <span class="dot">|</span> Group project
+        </p>
 
-      <section class="project-detail-content" aria-label="Project details">
-        <div class="project-detail-card">
-          <h2>Overview</h2>
-          <p>
-            This project explored an automated crosswalk warning concept that detects pedestrian presence
-            and provides clear, attention-grabbing driver alerts. The design focus was on practical sensing,
-            reliability in outdoor conditions, and simple signaling that improves visibility without requiring
-            complex user interaction.
-          </p>
-        </div>
+        <p class="project-meta">
+          GEEN 1400 <span class="dot">|</span> Freshman Engineering Projects
+        </p>
 
-        <div class="project-detail-grid">
-          <div class="project-detail-card">
-            <h2>Tools</h2>
-            <ul>
-              <li>Concept development and system architecture</li>
-              <li>Sensor selection and detection logic planning</li>
-              <li>Signal design and human factors thinking</li>
-              <li>Reliability and safety considerations</li>
-            </ul>
-          </div>
-
-          <div class="project-detail-card">
-            <h2>Highlights</h2>
-            <ul>
-              <li>Designed a sensor-triggered warning flow for drivers</li>
-              <li>Focused on visibility, clarity, and outdoor reliability</li>
-              <li>Considered false triggers and safe failure behavior</li>
-              <li>Emphasized simple, intuitive signaling under real conditions</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project-detail-card">
-          <h2>Links</h2>
-          <p>
-            <a href="#" target="_blank" rel="noopener">Concept diagram or slides (placeholder)</a>
-            <br />
-            <a href="#" target="_blank" rel="noopener">Write-up or report (placeholder)</a>
-          </p>
+        <div class="project-hero">
+          <img
+            src="CROSSWALK_WARNING_SYSTEM_HERO.JPG"
+            alt="Automated Pedestrian Crosswalk Warning System"
+          />
         </div>
       </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="fun-footer">
-      © 2025 Designed and Built by Alex Ayala •
-      <a href="contact.html">Contact</a> • 😊 Have a great day!
-    </footer>
+      <!-- OVERVIEW -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Overview</h2>
 
-    <!-- Nav scroll effect -->
-    <script>
-      window.addEventListener("scroll", function () {
-        const nav = document.querySelector(".top-nav");
-        if (window.scrollY > 10) nav.classList.add("scrolled");
-        else nav.classList.remove("scrolled");
-      });
-    </script>
+        <p class="principles-intro">
+          Pedestrian safety remains a persistent challenge at intersections without traffic signals, where drivers often
+          fail to notice pedestrians in time to yield. This project addressed that problem through the design and
+          prototyping of an Automated Pedestrian Crosswalk Warning System, intended to increase driver awareness using
+          clear visual cues when pedestrians approach or enter a crosswalk.
+        </p>
+      </section>
+
+      <!-- DEMONSTRATION -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Automated Pedestrian Crosswalk Warning System Demonstration</h2>
+
+        <p class="principles-intro">
+          The system was designed around a simple two-state warning concept. A yellow warning light activates when a
+          pedestrian approaches the crosswalk, while a red warning light activates once a pedestrian is actively crossing.
+          This distinction allows drivers to anticipate pedestrian movement rather than reacting at the last moment.
+        </p>
+      </section>
+
+      <!-- WARNING LIGHT EXPLANATION -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Warning Light Explanation</h2>
+
+        <p class="principles-intro">
+          Pedestrian detection was achieved using a layered sensing approach. An ultrasonic sensor detected pedestrians
+          approaching the crosswalk, while a passive infrared (PIR) sensor confirmed when a pedestrian entered the
+          crossing zone. Timers and logic thresholds were implemented to reduce false activations and ensure signals
+          remained active for the duration of a crossing.
+        </p>
+
+        <figure class="project-figure wide">
+          <img
+            src="CROSSWALK_CONTROL_LOGIC_FLOW_DIAGRAM.JPG"
+            alt="Control logic / flow diagram"
+          />
+          <figcaption>Control logic / flow diagram</figcaption>
+        </figure>
+
+        <figure class="project-figure wide">
+          <img
+            src="CROSSWALK_WIRING_DIAGRAM.JPG"
+            alt="Wiring Diagram"
+          />
+          <figcaption>Wiring Diagram</figcaption>
+        </figure>
+
+        <p class="principles-close">
+          A functional prototype was constructed using off-the-shelf components, with an emphasis on affordability and
+          feasibility. The total prototype cost was approximately $105, demonstrating that meaningful safety improvements
+          could be achieved without expensive infrastructure changes.
+        </p>
+
+        <p class="principles-intro">dsjfkldsj;klfdsjlfksad</p>
+
+        <p class="principles-intro">jsdklfjadskl;fj;asdkljfkl;dsajf;lksd</p>
+      </section>
+
+      <!-- TESTING -->
+      <section class="info-block livebolt-block">
+        <p class="principles-intro">
+          The system was tested in real-world conditions across multiple pedestrian movement types, including walking,
+          running, biking, and skateboarding. Testing showed approximately 80–90% detection accuracy, validating the
+          sensing approach while highlighting opportunities for improvement through higher-grade sensors and improved
+          placement.
+        </p>
+
+        <figure class="project-figure wide">
+          <img
+            src="CROSSWALK_TESTING_RESULTS_DETECTION_ACCURACY.JPG"
+            alt="Testing Results for detection accuracy"
+          />
+          <figcaption>Testing Results for detection accuracy</figcaption>
+        </figure>
+
+        <p class="principles-close">
+          While the prototype was not intended for permanent deployment, the project emphasized realistic engineering
+          tradeoffs, including system reliability, human interpretation of signals, and potential liability concerns.
+          Future improvements would focus on sensor redundancy, weatherproofing, and integration into existing urban
+          infrastructure.
+        </p>
+      </section>
+
+      <!-- KEY TAKEAWAY -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Key takeaway</h2>
+
+        <p class="principles-intro">
+          This project demonstrated the full engineering lifecycle—from problem identification and requirements
+          definition to prototyping, testing, and critical evaluation—while emphasizing practical, low-cost solutions to
+          real-world safety challenges.
+        </p>
+      </section>
+    </div>
   </body>
 </html>
