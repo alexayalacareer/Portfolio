@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Automotive Part Out Project | Alex Ayala</title>
+    <title>Mazda Miata Part Out Project | Alex Ayala</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Site styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -22,69 +32,104 @@
       </div>
     </div>
 
-    <main class="page project-detail-page">
-      <header class="project-detail-header">
-        <a class="project-back" href="projects.html">← Back to Projects</a>
-        <h1 class="project-detail-title">Automotive Part Out Project</h1>
-        <p class="project-detail-subtitle">
+    <!-- PAGE CONTENT -->
+    <div class="page">
+      <!-- Header card -->
+      <section class="section-container project-header-card">
+        <a class="project-back-btn" href="projects.html">← Back to Projects</a>
+
+        <h1 class="overview-title project-title">Mazda Miata Part Out Project</h1>
+
+        <p class="project-subtitle">
           Organized a teardown, cataloging, and resale workflow with focus on process discipline, documentation, and an ROI mindset.
         </p>
-      </header>
 
-      <section class="project-detail-hero" aria-label="Project hero">
-        <img
-          class="project-detail-image"
-          src="YOUR_PARTOUT_IMAGE.JPG"
-          alt="Automotive Part Out Project image"
-        />
-      </section>
+        <p class="project-meta">
+          Ongoing <span class="dot">•</span> Personal project <span class="dot">•</span>
+          Automotive teardown <span class="dot">•</span> Documentation & resale workflow
+        </p>
 
-      <section class="project-detail-content" aria-label="Project details">
-        <div class="project-detail-card">
-          <h2>Overview</h2>
-          <p>
-            This project focused on building a structured part-out workflow from start to finish: vehicle teardown,
-            component identification, condition assessment, cataloging, and resale preparation. The emphasis was on
-            repeatable process, clean documentation, and practical decision making driven by time, value, and return.
-          </p>
-        </div>
-
-        <div class="project-detail-grid">
-          <div class="project-detail-card">
-            <h2>Tools</h2>
-            <ul>
-              <li>Teardown planning and organization</li>
-              <li>Part labeling and photo documentation</li>
-              <li>Inventory tracking (spreadsheets)</li>
-              <li>Basic pricing and ROI evaluation</li>
-            </ul>
-          </div>
-
-          <div class="project-detail-card">
-            <h2>Highlights</h2>
-            <ul>
-              <li>Built a repeatable workflow for cataloging and resale preparation</li>
-              <li>Developed consistent documentation habits for parts and condition</li>
-              <li>Applied an ROI mindset to prioritize high value components</li>
-              <li>Improved organization and process discipline over time</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project-detail-card">
-          <h2>Links</h2>
-          <p>
-            <a href="#" target="_blank" rel="noopener">Inventory sheet or examples (placeholder)</a>
-            <br />
-            <a href="#" target="_blank" rel="noopener">Short write-up or photos (placeholder)</a>
-          </p>
+        <div class="project-hero">
+          <!-- Placeholder: replace with your preferred hero image -->
+          <img
+            src="MIATA_PARTOUT_HERO.JPG"
+            alt="Mazda Miata Part Out Project hero image"
+          />
         </div>
       </section>
-    </main>
+
+      <!-- Overview -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Overview</h2>
+        <p class="principles-intro">
+          This project focused on building a structured part-out workflow from start to finish: vehicle teardown,
+          component identification, condition assessment, cataloging, and resale preparation. The emphasis was on
+          repeatable process, clean documentation, and practical decision making driven by time, value, and return.
+        </p>
+
+        <div class="project-inline-grid">
+          <figure class="project-figure">
+            <img
+              src="MIATA_PARTOUT_TEARDOWN.JPG"
+              alt="Teardown and organization (placeholder)"
+            />
+            <figcaption>Teardown and organization (placeholder)</figcaption>
+          </figure>
+
+          <figure class="project-figure">
+            <img
+              src="MIATA_PARTOUT_CATALOG.JPG"
+              alt="Cataloging and documentation (placeholder)"
+            />
+            <figcaption>Cataloging and documentation (placeholder)</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Tools -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Tools</h2>
+        <ul class="project-bullets">
+          <li>Teardown planning and organization</li>
+          <li>Part labeling and photo documentation</li>
+          <li>Inventory tracking (spreadsheets)</li>
+          <li>Basic pricing and ROI evaluation</li>
+        </ul>
+      </section>
+
+      <!-- Highlights -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Highlights</h2>
+        <ul class="project-bullets">
+          <li>Built a repeatable workflow for cataloging and resale preparation</li>
+          <li>Developed consistent documentation habits for parts and condition</li>
+          <li>Applied an ROI mindset to prioritize high value components</li>
+          <li>Improved organization and process discipline over time</li>
+        </ul>
+
+        <figure class="project-figure wide">
+          <img
+            src="MIATA_PARTOUT_HIGHLIGHT.JPG"
+            alt="Workflow highlight image (placeholder)"
+          />
+          <figcaption>Workflow highlight image (placeholder)</figcaption>
+        </figure>
+      </section>
+
+      <!-- Links -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Links</h2>
+        <p class="principles-intro">
+          <a href="#" target="_blank" rel="noopener">Inventory sheet or examples (placeholder)</a>
+          <br />
+          <a href="#" target="_blank" rel="noopener">Short write-up or photos (placeholder)</a>
+        </p>
+      </section>
+    </div>
 
     <!-- FOOTER -->
     <footer class="fun-footer">
-      © 2025 Designed and Built by Alex Ayala •
+      © 2026 Designed and Built by Alex Ayala •
       <a href="contact.html">Contact</a> • 😊 Have a great day!
     </footer>
 
