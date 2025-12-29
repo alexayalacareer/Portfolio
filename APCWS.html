@@ -34,7 +34,7 @@
 
     <!-- PAGE CONTENT -->
     <div class="page">
-      <!-- HEADER -->
+      <!-- Header card -->
       <section class="section-container project-header-card">
         <a class="project-back-btn" href="projects.html">← Back to Projects</a>
 
@@ -43,61 +43,45 @@
         </h1>
 
         <p class="project-subtitle">
-          Sensor-based safety system that detects pedestrians and cyclists approaching or entering a crosswalk,
-          activating yellow or red warning lights to alert drivers in low-visibility areas and improve intersection safety.
+          Sensor-based safety prototype that detects pedestrians and cyclists approaching or entering a crosswalk,
+          activating yellow or red warning lights to alert drivers in low-visibility areas and improve intersection
+          safety.
         </p>
 
         <p class="project-meta">
-          Fall 2019 <span class="dot">|</span> Group project
-        </p>
-
-        <p class="project-meta">
-          GEEN 1400 <span class="dot">|</span> Freshman Engineering Projects
+          Fall 2019 <span class="dot">•</span> Group project <span class="dot">•</span> GEEN 1400 (Freshman Engineering Projects)
         </p>
 
         <div class="project-hero">
           <img
             src="CROSSWALK_WARNING_SYSTEM_HERO.JPG"
-            alt="Automated Pedestrian Crosswalk Warning System"
+            alt="Automated Pedestrian Crosswalk Warning System hero image"
           />
         </div>
       </section>
 
-      <!-- OVERVIEW -->
+      <!-- Main story -->
       <section class="info-block livebolt-block">
-        <h2 class="block-title">Overview</h2>
-
         <p class="principles-intro">
-          Pedestrian safety remains a persistent challenge at intersections without traffic signals, where drivers often
-          fail to notice pedestrians in time to yield. This project addressed that problem through the design and
-          prototyping of an Automated Pedestrian Crosswalk Warning System, intended to increase driver awareness using
-          clear visual cues when pedestrians approach or enter a crosswalk.
+          Pedestrian safety is a persistent challenge at intersections without traffic signals, where drivers can miss
+          people crossing—especially in low-light or poor-visibility conditions. This project focused on building a
+          simple, low-cost warning system that increases driver awareness using clear visual cues when pedestrians
+          approach or enter a crosswalk.
+        </p>
+
+        <p class="principles-close">
+          The core idea was straightforward: use sensors to detect movement near the crossing zone, then activate
+          highly-visible warning lights to prompt earlier driver reactions and reduce close calls. The result was a
+          functional prototype designed to be affordable, understandable, and feasible to implement at scale.
         </p>
       </section>
 
-      <!-- DEMONSTRATION -->
+      <!-- Demonstration + system logic -->
       <section class="info-block livebolt-block">
-        <h2 class="block-title">
-          Automated Pedestrian Crosswalk Warning System Demonstration
-        </h2>
-
         <p class="principles-intro">
-          The system was designed around a simple two-state warning concept. A yellow warning light activates when a
-          pedestrian approaches the crosswalk, while a red warning light activates once a pedestrian is actively
-          crossing. This distinction allows drivers to anticipate pedestrian movement rather than reacting at the
-          last moment.
-        </p>
-      </section>
-
-      <!-- WARNING LIGHT EXPLANATION -->
-      <section class="info-block livebolt-block">
-        <h2 class="block-title">Warning Light Explanation</h2>
-
-        <p class="principles-intro">
-          Pedestrian detection was achieved using a layered sensing approach. An ultrasonic sensor detected pedestrians
-          approaching the crosswalk, while a passive infrared (PIR) sensor confirmed when a pedestrian entered the
-          crossing zone. Timers and logic thresholds were implemented to reduce false activations and ensure signals
-          remained active for the duration of a crossing.
+          The prototype used a two-state warning concept. A yellow light activates when someone approaches the
+          crosswalk, and a red light activates once a person is actively crossing. This distinction helps drivers
+          anticipate pedestrian movement rather than reacting at the last moment.
         </p>
 
         <figure class="project-figure wide">
@@ -111,60 +95,75 @@
         <figure class="project-figure wide">
           <img
             src="CROSSWALK_WIRING_DIAGRAM.JPG"
-            alt="Wiring Diagram"
+            alt="Wiring diagram for the prototype system"
           />
-          <figcaption>Wiring Diagram</figcaption>
+          <figcaption>Wiring diagram</figcaption>
         </figure>
 
         <p class="principles-close">
-          A functional prototype was constructed using off-the-shelf components, with an emphasis on affordability and
-          feasibility. The total prototype cost was approximately $105, demonstrating that meaningful safety
-          improvements could be achieved without expensive infrastructure changes.
+          Pedestrian detection was built using a layered sensing approach. An ultrasonic sensor detected pedestrians
+          approaching the crosswalk, while a passive infrared (PIR) sensor confirmed when a pedestrian entered the
+          crossing zone. Timers and logic thresholds were used to reduce false activations and keep signals active for
+          the duration of a crossing.
+        </p>
+      </section>
+
+      <!-- Prototype build -->
+      <section class="info-block livebolt-block">
+        <p class="principles-intro">
+          A working prototype was constructed using off-the-shelf components with an emphasis on affordability and
+          practical build constraints. The total prototype cost came out to approximately $105, demonstrating that
+          meaningful safety improvements can be achieved without expensive infrastructure changes.
         </p>
 
         <figure class="project-figure wide">
           <img
             src="SENSOR_CONTROL_BOX.JPG"
-            alt="Sensor Control Box"
+            alt="Sensor control box prototype"
           />
-          <figcaption>Sensor Control Box</figcaption>
+          <figcaption>Sensor control box prototype</figcaption>
         </figure>
 
         <figure class="project-figure wide">
           <img
             src="SENSOR_CONTROL_BOX_2.JPG"
-            alt="Sensor Control Box"
+            alt="Sensor control box prototype (alternate view)"
           />
-          <figcaption>Sensor Control Box</figcaption>
+          <figcaption>Sensor control box prototype (alternate view)</figcaption>
         </figure>
+
+        <p class="principles-close">
+          Building the system required balancing reliability, simplicity, and usability—keeping the logic easy to
+          understand while still robust enough to handle real-world movement and timing.
+        </p>
       </section>
 
-      <!-- TESTING -->
+      <!-- Testing -->
       <section class="info-block livebolt-block">
         <p class="principles-intro">
           The system was tested in real-world conditions across multiple pedestrian movement types, including walking,
-          running, biking, and skateboarding. Testing showed approximately 80–90% detection accuracy, validating the
-          sensing approach while highlighting opportunities for improvement through higher-grade sensors and improved
+          running, biking, and skateboarding. Results showed approximately 80–90% detection accuracy, validating the
+          sensing approach while highlighting opportunities for improvement through higher-grade sensors and better
           placement.
         </p>
 
         <figure class="project-figure wide">
           <img
             src="CROSSWALK_TESTING_RESULTS_DETECTION_ACCURACY.JPG"
-            alt="Testing Results for detection accuracy"
+            alt="Testing results showing detection accuracy"
           />
-          <figcaption>Testing Results for detection accuracy</figcaption>
+          <figcaption>Testing results for detection accuracy</figcaption>
         </figure>
 
         <p class="principles-close">
           While the prototype was not intended for permanent deployment, the project emphasized realistic engineering
-          tradeoffs, including system reliability, human interpretation of signals, and potential liability concerns.
-          Future improvements would focus on sensor redundancy, weatherproofing, and integration into existing urban
+          tradeoffs—system reliability, human interpretation of signals, and potential liability concerns. Future
+          improvements would focus on sensor redundancy, weatherproofing, and integration into existing urban
           infrastructure.
         </p>
       </section>
 
-      <!-- KEY TAKEAWAY -->
+      <!-- Key takeaway -->
       <section class="info-block livebolt-block">
         <h2 class="block-title">Key takeaway</h2>
 
@@ -192,3 +191,4 @@
     </script>
   </body>
 </html>
+
