@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LIVEbolt | Alex Ayala</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Site styles -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -22,71 +32,177 @@
       </div>
     </div>
 
-    <main class="page project-detail-page">
-      <header class="project-detail-header">
-        <a class="project-back" href="projects.html">← Back to Projects</a>
-        <h1 class="project-detail-title">LIVEbolt</h1>
-        <p class="project-detail-subtitle">
-          Smart lock retrofit concept designed for renters. Removable, non-destructive,
-          key-preserving, and focused on clean usability and thoughtful hardware design.
+    <!-- PAGE CONTENT -->
+    <div class="page">
+      <!-- Header card -->
+      <section class="section-container project-header-card">
+        <a class="project-back-btn" href="projects.html">← Back to Projects</a>
+
+        <h1 class="overview-title project-title">LIVEbolt</h1>
+
+        <p class="project-subtitle">
+          No-damage smart add-on that locks and unlocks standard door hardware via a phone app,
+          letting users leave physical keys at home without replacing the lock.
         </p>
-      </header>
 
-      <section class="project-detail-hero" aria-label="Project hero">
-        <img
-          class="project-detail-image"
-          src="YOUR_LIVEBOLT_IMAGE.JPG"
-          alt="LIVEbolt smart lock project image"
-        />
-      </section>
+        <p class="project-meta">
+          Spring 2023 <span class="dot">•</span> Group project <span class="dot">•</span>
+          GEEN 3400 <span class="dot">•</span> Invention and Innovation
+        </p>
 
-      <section class="project-detail-content" aria-label="Project details">
-        <div class="project-detail-card">
-          <h2>Overview</h2>
-          <p>
-            LIVEbolt is a smart lock retrofit concept created to address a common renter
-            limitation: adding modern access control without permanently modifying existing
-            hardware. The system preserves traditional key use while introducing app-based
-            control through a compact and thoughtfully designed external module.
-          </p>
-        </div>
-
-        <div class="project-detail-grid">
-          <div class="project-detail-card">
-            <h2>Tools</h2>
-            <ul>
-              <li>Concept development and sketching</li>
-              <li>Mechanical layout and packaging logic</li>
-              <li>User-centered design thinking</li>
-              <li>System-level concept planning</li>
-            </ul>
-          </div>
-
-          <div class="project-detail-card">
-            <h2>Highlights</h2>
-            <ul>
-              <li>Designed specifically for renters and temporary installations</li>
-              <li>Maintains compatibility with existing mechanical locks</li>
-              <li>Emphasis on clean installation and removal</li>
-              <li>Balanced usability, security, and aesthetics</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project-detail-card">
-          <h2>Links</h2>
-          <p>
-            <a href="#" target="_blank" rel="noopener">Design deck (placeholder)</a>
-            <br />
-            <a href="#" target="_blank" rel="noopener">Concept documentation (placeholder)</a>
-          </p>
+        <div class="project-hero">
+          <img
+            src="LIVEbolt_Hero.JPG"
+            alt="LIVEbolt hero image"
+          />
         </div>
       </section>
-    </main>
+
+      <!-- Problem + objective -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Problem</h2>
+        <p class="principles-intro">
+          Many renters want the convenience and security of smart locks but face two major barriers:
+          they are either not permitted to modify their rental property, or they are unwilling to
+          invest in permanent hardware for a space they do not own. Existing smart lock solutions
+          often require replacing the deadbolt entirely, damaging doors, or making irreversible
+          changes that landlords do not approve.
+        </p>
+
+        <h2 class="block-title" style="margin-top: 18px;">Design Objective</h2>
+        <p class="principles-close">
+          Create a removable, damage-free smart lock system that adds app-based access control while
+          preserving full compatibility with a standard keyed deadbolt.
+        </p>
+
+        <div class="project-inline-grid">
+          <figure class="project-figure">
+            <img src="LIVEbolt_Demo_App_Unlock.JPG" alt="LIVEbolt demonstration unlocking deadbolt with app over Bluetooth" />
+            <figcaption>LIVEbolt demonstration unlocking deadbolt with app over Bluetooth</figcaption>
+          </figure>
+
+          <figure class="project-figure">
+            <img src="LIVEbolt_Logo.JPG" alt="LIVEbolt logo" />
+            <figcaption>LIVEbolt logo</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Constraints + prototyping -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Design Constraints</h2>
+        <ul class="project-bullets">
+          <li>Completely removable with no permanent modification to the door</li>
+          <li>No visible damage after removal</li>
+          <li>Presentable and discreet for high-visibility residential environments</li>
+          <li>Must retain full manual key functionality</li>
+          <li>App-controlled operation to enable keyless entry via smartphone</li>
+        </ul>
+
+        <h2 class="block-title" style="margin-top: 18px;">Early Concepts &amp; Prototyping</h2>
+        <p class="principles-intro">
+          We progressed through multiple prototype iterations, each addressing limitations discovered
+          during testing. Early designs focused on attachment methods and form factor, while later
+          revisions improved reliability, packaging, and user experience.
+        </p>
+        <p class="principles-close">
+          Each iteration incorporated team feedback, testing results, and revised requirements,
+          reflecting an iterative engineering design process.
+        </p>
+
+        <div class="project-inline-grid">
+          <figure class="project-figure">
+            <img src="LIVEbolt_Door_Render.JPG" alt="How LIVEbolt was conceptualized" />
+            <figcaption>How LIVEbolt was conceptualized</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Electrical + cost -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Electrical &amp; System Architecture</h2>
+        <p class="principles-intro">
+          The system uses a microcontroller-based architecture to actuate the deadbolt mechanism
+          while interfacing with a mobile application. Design emphasis was placed on low-cost
+          components, simplicity, and modular wiring to support repeatability and future revisions.
+        </p>
+
+        <figure class="project-figure wide">
+          <img src="LIVEbolt_System_Schematic.JPG" alt="System-level schematic showing controller, actuation, and power distribution" />
+          <figcaption>System-level schematic showing controller, actuation, and power distribution</figcaption>
+        </figure>
+
+        <h2 class="block-title" style="margin-top: 18px;">Cost &amp; Feasibility Analysis</h2>
+        <p class="principles-close">
+          The final prototype achieved a low per-unit material cost, enabling competitive pricing
+          while maintaining margin. This analysis informed break-even estimates and supported early
+          business planning decisions.
+        </p>
+
+        <figure class="project-figure wide">
+          <img src="LIVEbolt_Cost_Breakdown.JPG" alt="Component-level cost breakdown used for early manufacturing and pricing analysis" />
+          <figcaption>Component-level cost breakdown used for early manufacturing and pricing analysis</figcaption>
+        </figure>
+      </section>
+
+      <!-- Final design -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Final Product Design</h2>
+        <p class="principles-intro">
+          The final design is a fully functional, removable smart lock attachment that installs over an
+          existing deadbolt. The enclosure conceals all electronics while maintaining a clean,
+          residential appearance. The system supports both app-based operation and traditional key use,
+          ensuring redundancy and user flexibility.
+        </p>
+
+        <figure class="project-figure wide">
+          <img src="LIVEbolt_Exploded_CAD.JPG" alt="Exploded CAD view showing internal components, housing, and mechanical interfaces" />
+          <figcaption>Exploded CAD view showing internal components, housing, and mechanical interfaces</figcaption>
+        </figure>
+      </section>
+
+      <!-- Validation + app + outcomes -->
+      <section class="info-block livebolt-block">
+        <h2 class="block-title">Product Validation &amp; Demonstration</h2>
+        <p class="principles-intro">
+          Functional testing confirmed reliable locking and unlocking, seamless integration with standard
+          door hardware, and intuitive user interaction through the app interface.
+        </p>
+
+        <p class="project-links">
+          <a href="https://www.youtube.com/shorts/PWAILa1W" target="_blank" rel="noopener">
+            YouTube Link to Demonstration
+          </a>
+        </p>
+
+        <figure class="project-figure wide">
+          <img src="LIVEbolt_App_Screenshot.JPG" alt="LIVEbolt App" />
+          <figcaption>LIVEbolt App</figcaption>
+        </figure>
+
+        <h2 class="block-title" style="margin-top: 18px;">Product Development &amp; Business Considerations</h2>
+        <ul class="project-bullets">
+          <li>Market research and customer surveys</li>
+          <li>Competitive analysis of existing smart lock products</li>
+          <li>Pricing and break-even modeling</li>
+          <li>User experience considerations for renters</li>
+          <li>Manufacturability and scalability discussions</li>
+        </ul>
+
+        <h2 class="block-title" style="margin-top: 18px;">Outcome &amp; Takeaways</h2>
+        <p class="principles-close">
+          LIVEbolt served as a comprehensive test of end-to-end product development, combining
+          mechanical design, electronics, software integration, cost analysis, and market strategy.
+          The project demonstrated how engineering decisions must align with user constraints, business
+          realities, and real-world adoption requirements, particularly in regulated environments such as
+          rental housing.
+        </p>
+      </section>
+    </div>
 
     <!-- FOOTER -->
     <footer class="fun-footer">
-      © 2025 Designed and Built by Alex Ayala •
+      © 2026 Designed and Built by Alex Ayala •
       <a href="contact.html">Contact</a> • 😊 Have a great day!
     </footer>
 
@@ -100,3 +216,4 @@
     </script>
   </body>
 </html>
+
