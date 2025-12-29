@@ -1894,6 +1894,7 @@ main.page {
 
 /* Responsive */
 @media (max-width: 900px) {
+
   .project-hero img {
     height: 240px;
   }
@@ -1906,7 +1907,14 @@ main.page {
     height: 220px;
   }
 
+  .project-figure.wide {
+    align-items: center;
+  }
+
   .project-figure.wide img {
     height: 240px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
