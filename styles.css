@@ -1938,3 +1938,36 @@ main.page {
   }
 }
 
+/* ============================
+   BIG GROUP CONTAINERS
+============================ */
+
+.credentials-group {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 28px;
+  padding: 26px 26px 30px;
+  margin-bottom: 40px;
+
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* space between inner cards */
+.credentials-group .cred-card {
+  margin-top: 18px;
+}
+
+.credentials-group .cred-card:first-child {
+  margin-top: 0;
+}
+
+/* section title spacing */
+.credentials-section-title {
+  margin-bottom: 14px;
+}
+
+/* subtle separation between big sections */
+.credentials-section {
+  margin-bottom: 50px;
+}
