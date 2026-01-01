@@ -2250,9 +2250,10 @@ main.page {
 .cred-date,
 .cred-extra {
   margin: 0;
-  font-size: 13px;
-  font-weight: 700;
-  color: rgba(15, 23, 42, 0.72);
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #475569;
 }
 
 .cred-text {
