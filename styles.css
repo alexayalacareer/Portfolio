@@ -2238,10 +2238,12 @@ main.page {
 }
 
 .cred-meta {
-  margin: 10px 0 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  margin: 0;
+  color: #000000;
+  margin: 0 0 12px 0;
+  line-height: 1.7;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .cred-org,
@@ -2254,10 +2256,11 @@ main.page {
 }
 
 .cred-text {
-  margin: 10px 0 0;
-  font-size: 13.5px;
-  line-height: 1.6;
-  color: rgba(15, 23, 42, 0.80);
+  margin: 0;
+  color: #000000;
+  margin: 0 0 12px 0;
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
 /* Responsive: stack image above text on smaller screens */
