@@ -2045,7 +2045,7 @@ main.page {
 /* Section titles (dark again) */
 .credentials-section-title {
   margin: 0 0 14px;
-  color: #0f172a;
+  color: #000000;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.02em;
