@@ -2180,11 +2180,13 @@ main.page {
 
 /* Title inside big boxes */
 .credentials-section-title {
-  margin: 0 0 14px;
-  color: #000000;
-  font-size: 32px;
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  margin: 16px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Stack of smaller cards inside each big box */
