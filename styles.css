@@ -1324,6 +1324,21 @@ main.page {
   flex-wrap: wrap;
 }
 
+@media (max-width: 900px) {
+  .hero-button-row {
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .btn-pill {
+    min-width: 150px;
+  }
+}
+
+
 /* ============================
    CONTACT PAGE
 ============================ */
