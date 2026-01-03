@@ -2398,9 +2398,8 @@ main.page {
 .rotator-content {
   position: relative;
   z-index: 1;
-
-  max-width: 640px;
-  padding: 26px 26px;
+  max-width: 560px;          /* controls text column width */
+  padding: 0 64px;           /* creates breathing room from arrows */
 }
 
 .rotator-eyebrow {
