@@ -100,6 +100,86 @@
                  const nav = document.querySelector(".top-nav"); 
                  if (window.scrollY > 10) nav.classList.add("scrolled");
                  else nav.classList.remove("scrolled"); }); 
+         <script>
+  (function () {
+    const rotators = document.querySelectorAll("[data-rotator]");
+
+    rotators.forEach((rotator) => {
+      const slides = Array.from(rotator.querySelectorAll(".rotator-slide"));
+      const dots = Array.from(rotator.querySelectorAll(".rotator-dot"));
+      const prevBtn = rotator.querySelector(".rotator-prev");
+      const nextBtn = rotator.querySelector(".rotator-next");
+
+      if (slides.length < 2) return;
+
+      let index = 0;
+      let timer = null;
+      const interval = Number(rotator.getAttribute("data-interval")) || 6500;
+
+      function setActive(newIndex) {
+        index = (newIndex + slides.length) % slides.length;
+
+        slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+      }
+
+      function next() {
+        setActive(index + 1);
+      }
+
+      function prev() {
+        setActive(index - 1);
+      }
+
+      function start() {
+        stop();
+        timer = window.setInterval(next, interval);
+      }
+
+      function stop() {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+      }
+
+      nextBtn?.addEventListener("click", () => { next(); start(); });
+      prevBtn?.addEventListener("click", () => { prev(); start(); });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          setActive(i);
+          start();
+        });
+      });
+
+      rotator.addEventListener("mouseenter", stop);
+      rotator.addEventListener("mouseleave", start);
+      rotator.addEventListener("focusin", stop);
+      rotator.addEventListener("focusout", start);
+
+      rotator.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") { e.preventDefault(); prev(); start(); }
+        if (e.key === "ArrowRight") { e.preventDefault(); next(); start(); }
+      });
+
+      let touchStartX = 0;
+      rotator.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+      }, { passive: true });
+
+      rotator.addEventListener("touchend", (e) => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) < 40) return;
+        if (dx > 0) prev();
+        else next();
+        start();
+      });
+
+      setActive(0);
+      start();
+    });
+  })();
+</script>
+
  </script>
 
 </body>
