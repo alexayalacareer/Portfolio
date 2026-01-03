@@ -95,13 +95,17 @@
     © 2026 Designed and Built by Alex Ayala • <a href="contact.html">Contact</a> • 😊 Have a great day!
   </footer>
 
- <script> 
-         window.addEventListener("scroll", function () { 
-                 const nav = document.querySelector(".top-nav"); 
-                 if (window.scrollY > 10) nav.classList.add("scrolled");
-                 else nav.classList.remove("scrolled"); }); 
-         <script>
-  (function () {
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ===== NAV SCROLL EFFECT =====
+    const nav = document.querySelector(".top-nav");
+    window.addEventListener("scroll", () => {
+      if (!nav) return;
+      if (window.scrollY > 10) nav.classList.add("scrolled");
+      else nav.classList.remove("scrolled");
+    });
+
+    // ===== ROTATOR =====
     const rotators = document.querySelectorAll("[data-rotator]");
 
     rotators.forEach((rotator) => {
@@ -118,18 +122,12 @@
 
       function setActive(newIndex) {
         index = (newIndex + slides.length) % slides.length;
-
         slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
         dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
       }
 
-      function next() {
-        setActive(index + 1);
-      }
-
-      function prev() {
-        setActive(index - 1);
-      }
+      function next() { setActive(index + 1); }
+      function prev() { setActive(index - 1); }
 
       function start() {
         stop();
@@ -177,10 +175,9 @@
       setActive(0);
       start();
     });
-  })();
+  });
 </script>
 
- </script>
 
 </body>
 </html>
