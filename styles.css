@@ -1604,7 +1604,7 @@ main.page {
 .project-hover {
   position: absolute;
   inset: 0;
-  display: flex;
+  display: none;
   align-items: center;
 
   padding: 18px 20px;
@@ -1617,6 +1617,33 @@ main.page {
 
   transition: opacity 0.16s ease, transform 0.16s ease;
 }
+
+/* =========================================
+   PROJECT HOVER — DESKTOP ONLY (NO MOBILE)
+========================================= */
+
+/* Enable hover overlays ONLY on real hover devices */
+@media (hover: hover) and (pointer: fine) {
+  .project-hover {
+    display: flex;
+  }
+
+  .project-row:hover .project-hover,
+  .project-row:focus-visible .project-hover {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Absolute kill-switch for touch devices (prevents long-press hover) */
+@media (pointer: coarse) {
+  .project-hover {
+    display: none !important;
+    opacity: 0 !important;
+    transform: none !important;
+  }
+}
+
 
 .project-desc {
   margin: 0;
@@ -1644,20 +1671,7 @@ main.page {
   outline-offset: 4px;
 }
 
-/* Mobile: no hover overlay */
-@media (hover: none) {
-  .project-hover {
-    display: none;
-  }
-}
 
-@media (hover: none) {
-  .project-row:hover .project-hover {
-    display: none;
-    opacity: 0;
-    transform: none;
-  }
-}
 
 
 /* responsive */
