@@ -2395,9 +2395,9 @@ main.page {
 
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.38),
-    rgba(0, 0, 0, 0.24),
-    rgba(0, 0, 0, 0.12)
+    rgba(20, 20, 20, 0.38),
+    rgba(20, 20, 20, 0.24),
+    rgba(20, 20, 20, 0.12)
   );
 
   backdrop-filter: blur(2px);
