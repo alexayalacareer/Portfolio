@@ -1622,10 +1622,24 @@ main.page {
    PROJECT HOVER — DESKTOP ONLY (NO MOBILE)
 ========================================= */
 
-/* Enable hover overlays ONLY on real hover devices */
+/* Base state: overlay always hidden */
+.project-hover {
+  display: none;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+/* Desktop / real hover devices ONLY */
 @media (hover: hover) and (pointer: fine) {
   .project-hover {
     display: flex;
+  }
+
+  .project-row:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(15, 23, 42, 0.10);
+    border-color: rgba(31, 87, 164, 0.25);
   }
 
   .project-row:hover .project-hover,
@@ -1635,7 +1649,7 @@ main.page {
   }
 }
 
-/* Hard kill-switch for touch devices */
+/* HARD mobile kill-switch (tap + long-press safe) */
 @media (hover: none), (pointer: coarse) {
   .project-hover {
     display: none !important;
@@ -1643,24 +1657,21 @@ main.page {
     transform: none !important;
   }
 
-  .project-row:hover .project-hover,
-  .project-row:focus-visible .project-hover {
-    opacity: 0 !important;
+  .project-row:hover,
+  .project-row:focus-visible {
     transform: none !important;
+    box-shadow: none !important;
+    border-color: rgba(15, 23, 42, 0.08) !important;
   }
 }
 
-
-/* Absolute kill-switch for touch devices (prevents long-press hover) */
-@media (pointer: coarse) {
-  .project-hover {
-    display: none !important;
-    opacity: 0 !important;
-    transform: none !important;
-  }
+/* Keyboard accessibility (desktop only) */
+.project-row:focus-visible {
+  outline: 3px solid rgba(7, 36, 63, 0.35);
+  outline-offset: 4px;
 }
 
-
+/* Project description text */
 .project-desc {
   margin: 0;
   max-width: 900px;
@@ -1669,22 +1680,7 @@ main.page {
   line-height: 1.7;
 }
 
-/* hover + keyboard focus */
-.project-row:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.10);
-  border-color: rgba(31, 87, 164, 0.25);
-}
-
-.project-row:focus-visible {
-  outline: 3px solid rgba(7, 36, 63, 0.35);
-  outline-offset: 4px;
-}
-
-
-
-
-/* responsive */
+/* Responsive layout */
 @media (max-width: 900px) {
   .project-row {
     grid-template-columns: 1fr;
@@ -1698,6 +1694,9 @@ main.page {
     padding: 16px 16px 18px;
   }
 }
+
+
+
 
 /* ============================
    BANNER TILE (like your EESA tile)
