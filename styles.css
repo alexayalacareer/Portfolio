@@ -1651,6 +1651,15 @@ main.page {
   }
 }
 
+@media (hover: none) {
+  .project-row:hover .project-hover {
+    display: none;
+    opacity: 0;
+    transform: none;
+  }
+}
+
+
 /* responsive */
 @media (max-width: 900px) {
   .project-row {
