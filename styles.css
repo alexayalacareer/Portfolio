@@ -1159,7 +1159,7 @@ main.page {
 ---------------------------- */
 .hero-screenshot {
   margin: 0 auto;
-  padding: 10px 0 18px;
+  padding: 10px 0 0px;
   max-width: 1100px;
 }
 
