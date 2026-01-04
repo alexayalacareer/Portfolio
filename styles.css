@@ -2576,3 +2576,20 @@ main.page {
   }
 }
 
+/* Project CTA – always red */
+.btn-project {
+  background: linear-gradient(135deg, #b31919, #8f1414);
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(179, 25, 25, 0.35);
+}
+
+.btn-project:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 28px rgba(179, 25, 25, 0.45),
+    0 0 0 2px rgba(179, 25, 25, 0.18);
+}
+
+.btn-project:active {
+  transform: translateY(1px) scale(0.98);
+}
