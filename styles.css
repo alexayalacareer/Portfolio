@@ -1642,12 +1642,6 @@ main.page {
     border-color: rgba(31, 87, 164, 0.25);
   }
 
-  .project-row:hover .project-hover,
-  .project-row:focus-visible .project-hover {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* HARD mobile kill-switch (tap + long-press safe) */
 @media (hover: none), (pointer: coarse) {
@@ -1695,6 +1689,15 @@ main.page {
   }
 }
 
+/* ✅ Absolute mobile/off switch (wins even if device lies about hover) */
+@media (max-width: 900px) {
+  .project-hover {
+    display: none !important;
+    opacity: 0 !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+}
 
 
 
