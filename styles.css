@@ -2400,8 +2400,8 @@ main.page {
     rgba(0, 0, 0, 0.12)
   );
 
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 
