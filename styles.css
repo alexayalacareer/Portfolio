@@ -2411,7 +2411,7 @@ main.page {
   position: relative;
   z-index: 1;
   max-width: 560px;          /* controls text column width */
-  padding: 0 64px;           /* creates breathing room from arrows */
+  padding: 30 80px;           /* creates breathing room from arrows */
 }
 
 /* soft dark halo behind text block */
