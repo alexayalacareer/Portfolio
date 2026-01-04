@@ -1747,17 +1747,33 @@ main.page {
   color: #334155;
 }
 
-/* show on hover */
-.project-title-banner:hover .project-banner-hover,
+/* Desktop only: hover effects (real hover devices) */
+@media (hover: hover) and (pointer: fine) {
+  .project-title-banner:hover .project-banner-hover {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .project-title-banner:hover .project-title-text {
+    opacity: 0.15;
+  }
+}
+
+/* Keyboard accessibility: keep this for ALL devices */
 .project-title-banner:focus-visible .project-banner-hover {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
-/* fade title slightly when hover text appears */
-.project-title-banner:hover .project-title-text {
-  opacity: 0.15;
+/* Mobile: hard disable the hover overlay so iOS long-press can’t “stick” it */
+@media (hover: none), (pointer: coarse), (max-width: 700px) {
+  .project-banner-hover {
+    display: none !important;
+  }
 }
+
 
 
 .project-title-banner:focus-visible {
