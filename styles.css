@@ -2593,3 +2593,41 @@ main.page {
 .btn-project:active {
   transform: translateY(1px) scale(0.98);
 }
+
+
+/* ============================
+   ROTATOR — MOBILE SPACING FIX
+============================ */
+@media (max-width: 700px) {
+  /* Stop vertical centering so content sits naturally */
+  .rotator-slide {
+    align-items: start;
+  }
+
+  /* Give text/button breathing room (and space above dots) */
+  .rotator-content {
+    padding: 18px 16px 86px; /* bigger bottom padding = no dot overlap */
+    max-width: 100%;
+  }
+
+  /* Make title + button spacing consistent */
+  .rotator-title {
+    margin: 0 0 12px;
+    line-height: 1.08;
+  }
+
+  .rotator-text {
+    margin: 0 0 14px;
+  }
+
+  /* If rotator-text is hidden on mobile, keep button spacing nice */
+  .rotator-cta {
+    margin-top: 8px;
+  }
+
+  /* Keep dots comfortably away from the edge */
+  .rotator-dots {
+    bottom: 10px;
+  }
+}
+
