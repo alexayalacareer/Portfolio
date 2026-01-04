@@ -1641,7 +1641,7 @@ main.page {
     box-shadow: 0 14px 26px rgba(15, 23, 42, 0.10);
     border-color: rgba(31, 87, 164, 0.25);
   }
-
+}
 
 /* HARD mobile kill-switch (tap + long-press safe) */
 @media (hover: none), (pointer: coarse) {
