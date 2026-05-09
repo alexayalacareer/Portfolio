@@ -439,7 +439,133 @@ a {
   }
 }
 
+/* ============================
+   ABOUT PAGE LAYOUT
+============================ */
 
+.about-intro {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.about-intro p {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #000000;
+}
+
+/* Main alternating sections */
+.about-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 34px;
+  align-items: stretch;
+  margin: 70px 0;
+}
+
+/* Flip layout */
+.about-section.reverse {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.about-section.reverse .about-image {
+  order: 2;
+}
+
+.about-section.reverse .about-text {
+  order: 1;
+}
+
+/* Image column */
+.about-image {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+/* Two stacked images */
+.stacked-images img {
+  min-height: 200px;
+}
+
+/* Text column */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h2 {
+  margin: 0 0 14px;
+
+  font-size: 2rem;
+  line-height: 1.15;
+
+  color: #0f172a;
+}
+
+.about-text p {
+  margin: 0 0 14px 0;
+
+  color: #000000;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Final centered section */
+.about-closing {
+  max-width: 850px;
+  margin: 80px auto 0 auto;
+  text-align: center;
+}
+
+.about-closing h2 {
+  margin-bottom: 14px;
+}
+
+.about-closing p {
+  line-height: 1.8;
+  color: #000000;
+}
+
+/* ============================
+   MOBILE
+============================ */
+
+@media (max-width: 900px) {
+  .about-section,
+  .about-section.reverse {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-section.reverse .about-image,
+  .about-section.reverse .about-text {
+    order: initial;
+  }
+
+  .about-image img {
+    min-height: 240px;
+  }
+
+  .about-text h2 {
+    font-size: 1.7rem;
+  }
+}
 /* ============================
    GUIDING PRINCIPLES (ABOUT)
 ============================ */
